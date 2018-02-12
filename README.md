@@ -12,5 +12,5 @@ $ hexo server
 ```
 若编写完毕，部署到给github上
 ```
-hexo deploy
+$ hexo deploy
 ```
