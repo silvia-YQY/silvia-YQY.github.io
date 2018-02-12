@@ -1,9 +1,11 @@
 # hexo + github
 ## 先下载此文件
 然后打开文件中的hexo文件夹，并打开bash
-下载npm的包
+下载npm的包,并下载主题文件（hexo只自动下载默认主题）
 ```
 $ npm install
+$ git clone https://github.com/luuman/hexo-theme-spfk.git themes/spfk
+
 ```
 写文章
 ```
