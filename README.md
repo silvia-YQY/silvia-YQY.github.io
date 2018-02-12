@@ -1,6 +1,11 @@
 # hexo + github
 ## 先下载此文件
-然后打开文件中的hexo文件夹，
+然后打开文件中的hexo文件夹，并打开bash
+下载npm的包
+```
+$ npm install
+```
+写文章
 ```
 $ hexo new (文章名称)
 ```
