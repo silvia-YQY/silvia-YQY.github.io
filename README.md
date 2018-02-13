@@ -21,3 +21,25 @@ $ hexo server
 ```
 $ hexo deploy
 ```
+
+重新上传到hexo分支
+
+添加本地所有文件到仓库：
+`git add -A`
+
+添加commit：
+`git commit -m "blog源文件"`
+
+添加本地仓库分支hexo：  //此步骤为第一次是做，由于已经设定为hexo分支为主分支，故第二次开始不需要
+`git branch hexo`
+
+添加远程仓库：
+`git remote add origin git@github.com:silvia-YQY/silvia-YQY.github.io.git.`
+
+同步本地仓库到远程
+`git push origin hexo`
+
+这样就生成静态网页部署到了github中,并且源文件也上传到hexo分支上面
+
+
+**此处有一个问题，每次上传源文件的时候，第三方主题的文件总是无法上传。故每次更新博客都需要下载重新手动主题，并修改主题配置**
