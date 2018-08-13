@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Form 表单 | YQY</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="form表单有什么作用？有哪些常用的input 标签，分别有什么作用？ 表单在网页中主要负责数据采集功能。 常见input标签及其作用">
+<meta name="keywords" content="技术,html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Form 表单">
+<meta property="og:url" content="http://yoursite.com/2018/02/12/3/index.html">
+<meta property="og:site_name" content="YQY">
+<meta property="og:description" content="form表单有什么作用？有哪些常用的input 标签，分别有什么作用？ 表单在网页中主要负责数据采集功能。 常见input标签及其作用">
+<meta property="og:locale" content="zh-Ch">
+<meta property="og:updated_time" content="2018-08-13T14:44:58.877Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Form 表单">
+<meta name="twitter:description" content="form表单有什么作用？有哪些常用的input 标签，分别有什么作用？ 表单在网页中主要负责数据采集功能。 常见input标签及其作用">
+  
+    <link rel="alternative" href="/atom.xml" title="YQY" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">YQY</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">个人技术积累记录</p>
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/Home">博客首页</a></li>
+                        
+                            <li><a href="/works">作品展示</a></li>
+                        
+                            <li><a href="/about">留言打卡</a></li>
+                        
+                            <li><a href="/FrontEndGuide">前端导航</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=PAkNDgsKBQ4MCnxNTRJfU1E" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/luuman" title="github">github</a>
+                            
+                                <a class="fl zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+                            
+                                <a class="fl weibo" target="_blank" href="#" title="weibo">weibo</a>
+                            
+                                <a class="fl google" target="_blank" href="#" title="google">google</a>
+                            
+                                <a class="fl twitter" target="_blank" href="#" title="twitter">twitter</a>
+                            
+                                <a class="fl linkedin" target="_blank" href="#" title="linkedin">linkedin</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/CSS/" style="font-size: 15px;">CSS</a> <a href="/tags/HTTP/" style="font-size: 10px;">HTTP</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/技术/" style="font-size: 20px;">技术</a> <a href="/tags/编程/" style="font-size: 10px;">编程</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://luuman.github.io/">name</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">纯海迷、爱运动、爱交友、爱旅行、喜欢接触新鲜事物、迎接新的挑战，更爱游离于错综复杂的编码与逻辑中</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">YQY</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">YQY</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">个人技术积累记录</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/Home">博客首页</a></li>
+                
+                    <li><a href="/works">作品展示</a></li>
+                
+                    <li><a href="/about">留言打卡</a></li>
+                
+                    <li><a href="/FrontEndGuide">前端导航</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=PAkNDgsKBQ4MCnxNTRJfU1E" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/luuman" title="github">github</a>
+                    
+                        <a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+                    
+                        <a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+                    
+                        <a class="google" target="_blank" href="#" title="google">google</a>
+                    
+                        <a class="twitter" target="_blank" href="#" title="twitter">twitter</a>
+                    
+                        <a class="linkedin" target="_blank" href="#" title="linkedin">linkedin</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-3" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/02/12/3/" class="article-date">
+      <time datetime="2018-02-12T05:54:25.000Z" itemprop="datePublished">2018-02-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Form 表单
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/技术/">技术</a><a class="article-category-link" href="/categories/技术/前端/">前端</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="form表单有什么作用？有哪些常用的input-标签，分别有什么作用？"><a href="#form表单有什么作用？有哪些常用的input-标签，分别有什么作用？" class="headerlink" title="form表单有什么作用？有哪些常用的input 标签，分别有什么作用？"></a>form表单有什么作用？有哪些常用的input 标签，分别有什么作用？</h1><ol>
+<li>表单在网页中主要负责数据采集功能。</li>
+<li>常见input标签及其作用</li>
+</ol>
+<a id="more"></a>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alt</td>
+<td>text</td>
+<td>定义图像输入的替代文本。</td>
+</tr>
+<tr>
+<td>checked</td>
+<td>checked</td>
+<td>规定此 input 元素首次加载时应当被选中。</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>disabled</td>
+<td>当 input 元素加载时禁用此元素。</td>
+</tr>
+<tr>
+<td>form</td>
+<td>formname</td>
+<td>规定输入字段所属的一个或多个表单。</td>
+</tr>
+<tr>
+<td>formaction</td>
+<td><em>URL</em></td>
+<td>覆盖表单的 action 属性。（适用于 type=”submit” 和 type=”image”）</td>
+</tr>
+<tr>
+<td>formenctype</td>
+<td>见注释</td>
+<td>覆盖表单的 enctype 属性。（适用于 type=”submit” 和 type=”image”）</td>
+</tr>
+<tr>
+<td> formmethod</td>
+<td>get</td>
+<td>post覆盖表单的 method 属性。（适用于 type=”submit” 和 type=”image”）</td>
+</tr>
+<tr>
+<td>formtarget</td>
+<td>_blank、_self、_parent、_top、<em>framename</em></td>
+<td>覆盖表单的 target 属性。（适用于 type=”submit” 和 type=”image”）</td>
+</tr>
+<tr>
+<td>name</td>
+<td>field_name</td>
+<td>定义 input 元素的名称。</td>
+</tr>
+<tr>
+<td>type</td>
+<td>button、checkbox、file、hidden、image、password、radio、reset、submit、text</td>
+<td>规定 input 元素的类型。</td>
+</tr>
+<tr>
+<td>value</td>
+<td><em>value</em></td>
+<td>规定 input 元素的值。</td>
+</tr>
+</tbody>
+</table>
+<p><a href="http://www.w3school.com.cn/tags/tag_input.asp" target="_blank" rel="noopener">参考网址</a></p>
+<h1 id="post-和-get-方式的区别？"><a href="#post-和-get-方式的区别？" class="headerlink" title="post 和 get 方式的区别？"></a>post 和 get 方式的区别？</h1><p>GET的优点: </p>
+<ol>
+<li>执行效率比POST高。 </li>
+<li>可以通过url传递数据，查找数据的时候就会体现到它的好处。</li>
+</ol>
+<p>GET的缺点: </p>
+<ol>
+<li>安全性很低，因为上传的数据都会显示在url上，所以一般用在上传无关紧要的数据上。 </li>
+<li>上传的数据量较小，一般不能超过4K.这也是因为url的长度而被限制的。</li>
+</ol>
+<p>POST优点: </p>
+<ol>
+<li>安全性高，但是也不是很高，如果想要高安全性的话就用https传输协议。 </li>
+<li>上传的数据量比GET大得多。“理论上讲，POST是没有大小限制的，HTTP协议规范也没有进行大小限制，说“POST数据量存在 80K/100K的大小限制”是不准确的，POST数据是没有限制的，起限制作用的是服务器的处理程序的处理能力。”</li>
+</ol>
+<p>POST缺点:<br>1 .执行效率比GET低，但是现在的计算机都很强大，这些几乎可以忽略不计，所以建议一般都使用POST方式。 </p>
+<ol>
+<li>不可以通过url传递数据，有时候可能会不方便.</li>
+</ol>
+<p><a href="https://www.zhihu.com/question/28586791" target="_blank" rel="noopener">或者参考知乎</a></p>
+<h1 id="在input里，name-有什么作用？"><a href="#在input里，name-有什么作用？" class="headerlink" title="在input里，name 有什么作用？"></a>在input里，name 有什么作用？</h1><p><strong>定义和用法</strong><br>name 属性规定 input 元素的名称。<br>name 属性用于对提交到服务器后的表单数据进行标识，或者在客户端通过 JavaScript 引用表单数据。<br><em>注释：只有设置了 name 属性的表单元素才能在提交表单时传递它们的值。</em></p>
+<p>#radio 如何 分组?<br>设置 name 属性，相同的为一组</p>
+<p>#placeholder 属性有什么作用?<br>placeholder 属性提供可描述输入字段预期值的提示信息（hint）。<br>该提示会在输入字段为空时显示，并会在字段获得焦点时消失。<br>注释：placeholder 属性适用于以下的 <input> 类型：text, search, url, telephone, email 以及 password。</p>
+<h1 id="type-hidden隐藏域有什么作用-举例说明"><a href="#type-hidden隐藏域有什么作用-举例说明" class="headerlink" title="type=hidden隐藏域有什么作用? 举例说明"></a>type=hidden隐藏域有什么作用? 举例说明</h1><p><strong>作用</strong></p>
+<p>1 隐藏域在页面中对于用户是不可见的，在表单中插入隐藏域的目的在于收集或发送信息，以利于被处理表单的程序所使用。浏览者单击发送按钮发送表单的时候，隐藏域的信息也被一起发送到服务器。 </p>
+<p>2 有些时候我们要给用户一信息，让他在提交表单时提交上来以确定用户身份，如sessionkey，等等．当然这些东西也能用cookie实现，但使用隐藏域就简单的多了．而且不会有浏览器不支持，用户禁用cookie的烦恼。 </p>
+<p>3 有些时候一个form里有多个提交按钮，怎样使程序能够分清楚到底用户是按那一个按钮提交上来的呢？我们就可以写一个隐藏域，然后在每一个按钮处加上onclick=”document.form.command.value=”xx””然后我们接到数据后先检查command的值就会知道用户是按的那个按钮提交上来的。 </p>
+<p>4 有时候一个网页中有多个form，我们知道多个form是不能同时提交的，但有时这些form确实相互作用，我们就可以在form中添加隐藏域来使它们联系起来。 </p>
+<p>5 javascript不支持全局变量，但有时我们必须用全局变量，我们就可以把值先存在隐藏域里，它的值就不会丢失了。 </p>
+<p>6 还有个例子，比如按一个按钮弹出四个小窗口，当点击其中的一个小窗口时其他三个自动关闭．可是IE不支持小窗口相互调用，所以只有在父窗口写个隐藏域，当小窗口看到那个隐藏域的值是close时就自己关掉。</p>
+
+      
+      
+        <div class="page-reward">
+          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang">赏</a></p>
+          <div class="hide_box"></div>
+          <div class="shang_box">
+            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+            <div class="shang_tit">
+              <p>纯属好玩</p>
+            </div>
+            <div class="shang_payimg">
+              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+            </div>
+              <div class="pay_explain">扫码打赏，你说多少就多少</div>
+            <div class="shang_payselect">
+              
+                <div class="pay_item checked" data-id="alipay">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/alipay.png" alt="支付宝" /></span>
+                </div>
+              
+              
+                <div class="pay_item" data-id="wechat">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/weixin.png" alt="微信" /></span>
+                </div>
+              
+            </div>
+            <div class="shang_info">
+              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <script type="text/javascript">
+          $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+          });
+          function dashangToggle(){
+            
+            $(".hide_box").fadeToggle();
+            $(".shang_box").fadeToggle();
+          }
+        </script>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/02/12/3/">Form 表单</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 YQY 的个人博客">YQY</a></p>
+        <p><span>发布时间:</span>2018年02月12日 - 13时54分</p>
+        <p><span>最后更新:</span>2018年08月13日 - 22时44分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/02/12/3/" title="Form 表单">http://yoursite.com/2018/02/12/3/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/02/12/3/　　作者: YQY" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/2018/02/12/4/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          CSS简单入门
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/02/12/2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hexo + github 配置及错误解决</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#form表单有什么作用？有哪些常用的input-标签，分别有什么作用？"><span class="toc-number">1.</span> <span class="toc-text">form表单有什么作用？有哪些常用的input 标签，分别有什么作用？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#post-和-get-方式的区别？"><span class="toc-number">2.</span> <span class="toc-text">post 和 get 方式的区别？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#在input里，name-有什么作用？"><span class="toc-number">3.</span> <span class="toc-text">在input里，name 有什么作用？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#type-hidden隐藏域有什么作用-举例说明"><span class="toc-number">4.</span> <span class="toc-text">type=hidden隐藏域有什么作用? 举例说明</span></a></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+        <div id="gitments"></div>
+<script src="/js/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+      id: window.location.pathname,
+      owner: 'luuman',
+      repo: 'luuman.github.io',
+      oauth: {
+        client_id: '',
+        client_secret: '',
+      },
+    })
+    gitment.render('gitments')
+</script>
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2018/02/12/4/" title="上一篇: CSS简单入门">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2018/02/12/2/" title="下一篇: hexo + github 配置及错误解决">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/08/13/垂直居中/">垂直居中</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/12/">CSS规范</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/11/">浏览器兼容</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/10/">布局</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/9/">浮动定位BFC边距合并</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/8/">CSS样式</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/7/">CSS常见样式2</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/6/">CSS常见样式</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/5/">CSS选择器</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/4/">CSS简单入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/3/">Form 表单</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/2/">hexo + github 配置及错误解决</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/1/">从 URL 输入到页面展现发生了什么</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2018 YQY
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >海贼到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>

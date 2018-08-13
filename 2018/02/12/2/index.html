@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>hexo + github 配置及错误解决 | YQY</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="下个月开始要准备找工作了，所以最近需要建个博客，这样到时候面试就可以show一手啦。但素呢，特喵的！！！hexo+github搭建，可以说非常简单，也可以说是非常难。整整用了我一天的时间，所以我必须要记录一下。免得以后再次出错忘记怎么弄了。【此教程默认已安装git Bash，nodejs，且已注册github，并绑定ssh key】">
+<meta name="keywords" content="技术,hexo,github">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo + github 配置及错误解决">
+<meta property="og:url" content="http://yoursite.com/2018/02/12/2/index.html">
+<meta property="og:site_name" content="YQY">
+<meta property="og:description" content="下个月开始要准备找工作了，所以最近需要建个博客，这样到时候面试就可以show一手啦。但素呢，特喵的！！！hexo+github搭建，可以说非常简单，也可以说是非常难。整整用了我一天的时间，所以我必须要记录一下。免得以后再次出错忘记怎么弄了。【此教程默认已安装git Bash，nodejs，且已注册github，并绑定ssh key】">
+<meta property="og:locale" content="zh-Ch">
+<meta property="og:updated_time" content="2018-08-13T14:44:58.876Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo + github 配置及错误解决">
+<meta name="twitter:description" content="下个月开始要准备找工作了，所以最近需要建个博客，这样到时候面试就可以show一手啦。但素呢，特喵的！！！hexo+github搭建，可以说非常简单，也可以说是非常难。整整用了我一天的时间，所以我必须要记录一下。免得以后再次出错忘记怎么弄了。【此教程默认已安装git Bash，nodejs，且已注册github，并绑定ssh key】">
+  
+    <link rel="alternative" href="/atom.xml" title="YQY" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">YQY</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">个人技术积累记录</p>
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/Home">博客首页</a></li>
+                        
+                            <li><a href="/works">作品展示</a></li>
+                        
+                            <li><a href="/about">留言打卡</a></li>
+                        
+                            <li><a href="/FrontEndGuide">前端导航</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=PAkNDgsKBQ4MCnxNTRJfU1E" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/luuman" title="github">github</a>
+                            
+                                <a class="fl zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+                            
+                                <a class="fl weibo" target="_blank" href="#" title="weibo">weibo</a>
+                            
+                                <a class="fl google" target="_blank" href="#" title="google">google</a>
+                            
+                                <a class="fl twitter" target="_blank" href="#" title="twitter">twitter</a>
+                            
+                                <a class="fl linkedin" target="_blank" href="#" title="linkedin">linkedin</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/CSS/" style="font-size: 15px;">CSS</a> <a href="/tags/HTTP/" style="font-size: 10px;">HTTP</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/技术/" style="font-size: 20px;">技术</a> <a href="/tags/编程/" style="font-size: 10px;">编程</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://luuman.github.io/">name</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">纯海迷、爱运动、爱交友、爱旅行、喜欢接触新鲜事物、迎接新的挑战，更爱游离于错综复杂的编码与逻辑中</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">YQY</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">YQY</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">个人技术积累记录</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/Home">博客首页</a></li>
+                
+                    <li><a href="/works">作品展示</a></li>
+                
+                    <li><a href="/about">留言打卡</a></li>
+                
+                    <li><a href="/FrontEndGuide">前端导航</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=PAkNDgsKBQ4MCnxNTRJfU1E" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/luuman" title="github">github</a>
+                    
+                        <a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+                    
+                        <a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+                    
+                        <a class="google" target="_blank" href="#" title="google">google</a>
+                    
+                        <a class="twitter" target="_blank" href="#" title="twitter">twitter</a>
+                    
+                        <a class="linkedin" target="_blank" href="#" title="linkedin">linkedin</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/02/12/2/" class="article-date">
+      <time datetime="2018-02-12T05:47:53.000Z" itemprop="datePublished">2018-02-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      hexo + github 配置及错误解决
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/技术/">技术</a><a class="article-category-link" href="/categories/技术/前端/">前端</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>下个月开始要准备找工作了，所以最近需要建个博客，这样到时候面试就可以show一手啦。但素呢，特喵的！！！hexo+github搭建，可以说非常简单，也可以说是非常难。整整用了我一天的时间，所以我必须要记录一下。免得以后再次出错忘记怎么弄了。<br>【此教程默认已安装git Bash，nodejs，且已注册github，并绑定ssh key】</p>
+<a id="more"></a>
+<p><strong><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">文档是宝典，多看</a></strong></p>
+<p>#正常模式（对于电脑第一次安装部署hexo的）</p>
+<ol>
+<li>在github上创建一个仓库，名字为<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">silvia-YQY.github.io</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>可默认添加README.md</p>
+<ol>
+<li>电脑安装hexo<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g          //全局安装hexo客户端</span><br><span class="line">$ hexo init blog                   //创建一个blog的文件夹，并且hexo初始化改文件夹</span><br><span class="line">$ cd blog                          //进入blog文件夹</span><br><span class="line">$ npm install                      //安装hexo需要的包</span><br><span class="line">$ hexo server                   //打开hexo服务器，默认端口为4000；</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>此时本地的hexo已经部署完毕，在浏览器搜索 ： <a href="http://localhost:4000，已经可以查看博客" target="_blank" rel="noopener">http://localhost:4000，已经可以查看博客</a></p>
+<ol>
+<li><p>部署hexo到github上面</p>
+<ul>
+<li><p>安装hexo-deployer-git</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改blog文件夹下面的yml文件</p>
+</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:silvia-YQY/silvia-YQY.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line">  message: blog</span><br></pre></td></tr></table></figure>
+<ul>
+<li>重新生成并部署</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p><strong>注：无须将blog文件夹里面安装silvia-YQY.github.io仓库的文件夹内，而且无须git push 上传。只需要安装hexo-deployer-git，并运行hexo deploy ，该插件会自动将文件部署到silvia-YQY.github.io仓库内。</strong></p>
+<p><strong>切记！！！不要把hexo的blog文件夹复制过去silvia-YQY.github.io仓库，silvia-YQY.github.io仓库无须操作任何事情！！！血的教训</strong></p>
+<p>此时本地的hexo已经在github部署完毕，在浏览器搜索 ： <a href="https://silvia-yqy.github.io，已经可以查看博客" target="_blank" rel="noopener">https://silvia-yqy.github.io，已经可以查看博客</a></p>
+<h1 id="此为不知道为何会出问题的解决办法"><a href="#此为不知道为何会出问题的解决办法" class="headerlink" title="此为不知道为何会出问题的解决办法"></a>此为不知道为何会出问题的解决办法</h1><p>由于之前在家里弄，全部已经部署完毕了，并且可以正常运行。但是更新文章的时候，可能是手贱，上传文件上传错了，而且自己也傻逼的把文件复制过去仓库了，所以，哎~</p>
+<ol>
+<li>hexo deploy 错误<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">nothing to commit, working directory clean</span><br><span class="line">Permission denied (publickey).</span><br><span class="line">fatal: Could not read from remote repository.</span><br><span class="line">Please make sure you have the correct access rights</span><br><span class="line">and the repository exists.</span><br><span class="line">FATAL Something&apos;s wrong. Maybe you can find the solution here: [http://hexo.io/docs/troubleshooting.html](http://hexo.io/docs/troubleshooting.html)</span><br><span class="line"></span><br><span class="line">Error: Permission denied (publickey).                    //  此为重点！！！！</span><br><span class="line"></span><br><span class="line">fatal: Could not read from remote repository.</span><br><span class="line">Please make sure you have the correct access rights</span><br><span class="line">and the repository exists.</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>该错误，跟着<a href="https://help.github.com/articles/error-permission-denied-publickey/" target="_blank" rel="noopener">官方文档</a>做就好。</p>
+<p><strong>在hexo文件夹内进行一下操作,期间若需要输入密码，就输入密码吧</strong></p>
+<ul>
+<li>1.1 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -T git@github.com</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>没出错后</p>
+<ul>
+<li>1.2<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eval &quot;$(ssh-agent -s)&quot;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>正确应该为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br><span class="line">Enter passphrase for key &apos;/c/Users/Administrator/.ssh/id_rsa&apos;:</span><br><span class="line">Hi silvia-YQY! You&apos;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>1.3<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ eval &quot;$(ssh-agent -s)&quot;</span><br><span class="line">Agent pid 2556</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>1.4 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-add -l -E md5</span><br><span class="line">4096 MD5:7a:fa:c3:4e:cf:1a:91:b7:d0:5d:45:79:90:b4:d8:03 /c/Users/Administrator/.ssh/id_rsa (RSA)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>下面的md5码出现为正常，若出现一下情况<br>  <figure class="highlight plain"><figcaption><span>agent has no identities.```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">则先去C:\Users\Administrator\.ssh删除known_hosts文件，然后运行</span><br><span class="line">```$ ssh-add ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure></p>
+<p>此为正确信息<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-add ~/.ssh/id_rsa</span><br><span class="line">Enter passphrase for /c/Users/Administrator/.ssh/id_rsa:</span><br><span class="line">Identity added: /c/Users/Administrator/.ssh/id_rsa (/c/Users/Administrator/.ssh/id_rsa)</span><br></pre></td></tr></table></figure></p>
+<p>正确后，再次运行<br><figure class="highlight plain"><figcaption><span>ssh-add -l -E md5```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">出现md5码为一斤绑定权限成功。</span><br><span class="line">此时可以顺利的  ```$ hexo deploy</span><br></pre></td></tr></table></figure></p>
+
+      
+      
+        <div class="page-reward">
+          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang">赏</a></p>
+          <div class="hide_box"></div>
+          <div class="shang_box">
+            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+            <div class="shang_tit">
+              <p>纯属好玩</p>
+            </div>
+            <div class="shang_payimg">
+              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+            </div>
+              <div class="pay_explain">扫码打赏，你说多少就多少</div>
+            <div class="shang_payselect">
+              
+                <div class="pay_item checked" data-id="alipay">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/alipay.png" alt="支付宝" /></span>
+                </div>
+              
+              
+                <div class="pay_item" data-id="wechat">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/weixin.png" alt="微信" /></span>
+                </div>
+              
+            </div>
+            <div class="shang_info">
+              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <script type="text/javascript">
+          $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+          });
+          function dashangToggle(){
+            
+            $(".hide_box").fadeToggle();
+            $(".shang_box").fadeToggle();
+          }
+        </script>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/02/12/2/">hexo + github 配置及错误解决</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 YQY 的个人博客">YQY</a></p>
+        <p><span>发布时间:</span>2018年02月12日 - 13时47分</p>
+        <p><span>最后更新:</span>2018年08月13日 - 22时44分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/02/12/2/" title="hexo + github 配置及错误解决">http://yoursite.com/2018/02/12/2/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/02/12/2/　　作者: YQY" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/2018/02/12/3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Form 表单
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/02/12/1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">从 URL 输入到页面展现发生了什么</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#此为不知道为何会出问题的解决办法"><span class="toc-number">1.</span> <span class="toc-text">此为不知道为何会出问题的解决办法</span></a></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+        <div id="gitments"></div>
+<script src="/js/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+      id: window.location.pathname,
+      owner: 'luuman',
+      repo: 'luuman.github.io',
+      oauth: {
+        client_id: '',
+        client_secret: '',
+      },
+    })
+    gitment.render('gitments')
+</script>
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2018/02/12/3/" title="上一篇: Form 表单">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2018/02/12/1/" title="下一篇: 从 URL 输入到页面展现发生了什么">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/08/13/垂直居中/">垂直居中</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/12/">CSS规范</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/11/">浏览器兼容</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/10/">布局</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/9/">浮动定位BFC边距合并</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/8/">CSS样式</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/7/">CSS常见样式2</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/6/">CSS常见样式</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/5/">CSS选择器</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/4/">CSS简单入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/3/">Form 表单</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/2/">hexo + github 配置及错误解决</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/1/">从 URL 输入到页面展现发生了什么</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2018 YQY
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >海贼到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>

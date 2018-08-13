@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>CSS常见样式 | YQY</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="块级元素和行内元素分别有哪些？动手测试并列出4条以上的特性区别">
+<meta name="keywords" content="技术,CSS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS常见样式">
+<meta property="og:url" content="http://yoursite.com/2018/02/12/6/index.html">
+<meta property="og:site_name" content="YQY">
+<meta property="og:description" content="块级元素和行内元素分别有哪些？动手测试并列出4条以上的特性区别">
+<meta property="og:locale" content="zh-Ch">
+<meta property="og:updated_time" content="2018-08-13T14:44:58.886Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS常见样式">
+<meta name="twitter:description" content="块级元素和行内元素分别有哪些？动手测试并列出4条以上的特性区别">
+  
+    <link rel="alternative" href="/atom.xml" title="YQY" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">YQY</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">个人技术积累记录</p>
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/Home">博客首页</a></li>
+                        
+                            <li><a href="/works">作品展示</a></li>
+                        
+                            <li><a href="/about">留言打卡</a></li>
+                        
+                            <li><a href="/FrontEndGuide">前端导航</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=PAkNDgsKBQ4MCnxNTRJfU1E" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/luuman" title="github">github</a>
+                            
+                                <a class="fl zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+                            
+                                <a class="fl weibo" target="_blank" href="#" title="weibo">weibo</a>
+                            
+                                <a class="fl google" target="_blank" href="#" title="google">google</a>
+                            
+                                <a class="fl twitter" target="_blank" href="#" title="twitter">twitter</a>
+                            
+                                <a class="fl linkedin" target="_blank" href="#" title="linkedin">linkedin</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/CSS/" style="font-size: 15px;">CSS</a> <a href="/tags/HTTP/" style="font-size: 10px;">HTTP</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/技术/" style="font-size: 20px;">技术</a> <a href="/tags/编程/" style="font-size: 10px;">编程</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://luuman.github.io/">name</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">纯海迷、爱运动、爱交友、爱旅行、喜欢接触新鲜事物、迎接新的挑战，更爱游离于错综复杂的编码与逻辑中</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">YQY</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">YQY</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">个人技术积累记录</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/Home">博客首页</a></li>
+                
+                    <li><a href="/works">作品展示</a></li>
+                
+                    <li><a href="/about">留言打卡</a></li>
+                
+                    <li><a href="/FrontEndGuide">前端导航</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=PAkNDgsKBQ4MCnxNTRJfU1E" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/luuman" title="github">github</a>
+                    
+                        <a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+                    
+                        <a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+                    
+                        <a class="google" target="_blank" href="#" title="google">google</a>
+                    
+                        <a class="twitter" target="_blank" href="#" title="twitter">twitter</a>
+                    
+                        <a class="linkedin" target="_blank" href="#" title="linkedin">linkedin</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-6" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/02/12/6/" class="article-date">
+      <time datetime="2018-02-12T06:20:01.000Z" itemprop="datePublished">2018-02-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CSS常见样式
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/技术/">技术</a><a class="article-category-link" href="/categories/技术/前端/">前端</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="块级元素和行内元素分别有哪些？动手测试并列出4条以上的特性区别"><a href="#块级元素和行内元素分别有哪些？动手测试并列出4条以上的特性区别" class="headerlink" title="块级元素和行内元素分别有哪些？动手测试并列出4条以上的特性区别"></a>块级元素和行内元素分别有哪些？动手测试并列出4条以上的特性区别</h1><a id="more"></a>
+<h2 id="块级元素："><a href="#块级元素：" class="headerlink" title="块级元素："></a><strong>块级元素：</strong></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">div  , h1-6 , p  , form,   ul,  li ,  ol, dl, dd ,  dt , tr ,   td,   th,   form,   address, hr, menu,  table</span><br></pre></td></tr></table></figure>
+<h2 id="行内元素："><a href="#行内元素：" class="headerlink" title="行内元素："></a><strong>行内元素：</strong></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a,  span,   strong,   em,  br,  img ,  input,  button , label,  select,  textarea, code ,  script</span><br></pre></td></tr></table></figure>
+<h2 id="特性区别"><a href="#特性区别" class="headerlink" title="特性区别:"></a><strong>特性区别:</strong></h2><!--more-->
+<h3 id="块级元素会独占一行-默认情况下-其宽度自动填满其父元素宽度"><a href="#块级元素会独占一行-默认情况下-其宽度自动填满其父元素宽度" class="headerlink" title="块级元素会独占一行,默认情况下,其宽度自动填满其父元素宽度."></a><strong>块级元素会独占一行,默认情况下,其宽度自动填满其父元素宽度.</strong></h3><blockquote>
+<p><strong>行内元素不会独占一行,相邻的行内元素会排列在同一行里,直到一行排不下,才会换行,其宽度随元素的内容而变化.　</strong></p>
+</blockquote>
+<h3 id="块级-block-level-行内-内联、inline-level"><a href="#块级-block-level-行内-内联、inline-level" class="headerlink" title="块级(block-level); 行内(内联、inline-level)"></a><strong>块级(block-level); 行内(内联、inline-level)</strong></h3><blockquote>
+<p>块级可以包含块级和行内，行内只能包含文本和行内<br>块级占据一整行空间，行内占据自身宽度空间<br>宽高设置、内外边距的差异</p>
+</blockquote>
+<h3 id="另外"><a href="#另外" class="headerlink" title="另外"></a><strong>另外</strong></h3><blockquote>
+<ol>
+<li>只对块级元素设置生效,对行内元素设置无效<br>块级元素可以设置width,height属性.<br>行内元素设置width,height属性无效，它的长度高度主要根据内容决定.</li>
+<li>块级元素即使设置了宽度,仍然是独占一行.</li>
+<li>块级元素可以设置margin和padding属性.</li>
+<li>行内元素的margin和padding属性,水平方向（左右）产生边距效果,但竖直方向（上下）却不会产生边距效果.</li>
+<li>块级元素对应于display:block.</li>
+<li>行内元素对应于display:inline.</li>
+</ol>
+</blockquote>
+<h1 id="什么是-CSS-继承-哪些属性能继承，哪些不能？"><a href="#什么是-CSS-继承-哪些属性能继承，哪些不能？" class="headerlink" title="什么是 CSS 继承? 哪些属性能继承，哪些不能？"></a>什么是 CSS 继承? 哪些属性能继承，哪些不能？</h1><blockquote>
+<p>所谓css的继承是指被包在内部的标签将拥有外部标签的样式性质。它是依赖于祖先-后代的关系的。继承是一种机制，它允许样式不仅可以应用于某个特定的元素，还可以应用于它的后代。</p>
+</blockquote>
+<h2 id="一、无继承性的属性"><a href="#一、无继承性的属性" class="headerlink" title="一、无继承性的属性"></a><strong>一、无继承性的属性</strong></h2><ol>
+<li><p>display：规定元素应该生成的框的类型</p>
+</li>
+<li><p>文本属性：<br>vertical-align：垂直文本对齐<br>text-decoration：规定添加到文本的装饰<br>text-shadow：文本阴影效果<br>white-space：空白符的处理<br>unicode-bidi：设置文本的方向</p>
+</li>
+<li><p>盒子模型的属性：width、height、margin 、margin-top、margin-right、margin-bottom、margin-left、border、border-style、border-top-style、border-right-style、border-bottom-style、border-left-style、border-width、border-top-width、border-right-right、border-bottom-width、border-left-width、border-color、border-top-color、border-right-color、border-bottom-color、border-left-color、border-top、border-right、border-bottom、border-left、padding、padding-top、padding-right、padding-bottom、padding-left</p>
+</li>
+<li>背景属性：background、background-color、background-image、background-repeat、background-position、background-attachment</li>
+<li>定位属性：float、clear、position、top、right、bottom、left、min-width、min-height、max-width、max-height、overflow、clip、z-index</li>
+<li>生成内容属性：content、counter-reset、counter-increment</li>
+<li>轮廓样式属性：outline-style、outline-width、outline-color、outline</li>
+<li>页面样式属性：size、page-break-before、page-break-after</li>
+<li>声音样式属性：pause-before、pause-after、pause、cue-before、cue-after、cue、play-during</li>
+</ol>
+<h2 id="二、有继承性的属性"><a href="#二、有继承性的属性" class="headerlink" title="二、有继承性的属性"></a><strong>二、有继承性的属性</strong></h2><ol>
+<li><p>字体系列属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">font：组合字体</span><br><span class="line">font-family：规定元素的字体系列</span><br><span class="line">font-weight：设置字体的粗细</span><br><span class="line">font-size：设置字体的尺寸</span><br><span class="line">font-style：定义字体的风格</span><br><span class="line">font-variant：设置小型大写字母的字体显示文本，这意味着所有的小写字母均会被转换为大写，但是所有使用小型大写字体的字母与其余文本相比，其字体尺寸更小。</span><br><span class="line">font-stretch：对当前的 font-family 进行伸缩变形。所有主流浏览器都不支持。</span><br><span class="line">font-size-adjust：为某个元素规定一个 aspect 值，这样就可以保持首选字体的 x-height。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>文本系列属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">text-indent：文本缩进</span><br><span class="line">text-align：文本水平对齐</span><br><span class="line">line-height：行高</span><br><span class="line">word-spacing：增加或减少单词间的空白（即字间隔）</span><br><span class="line">letter-spacing：增加或减少字符间的空白（字符间距）</span><br><span class="line">text-transform：控制文本大小写</span><br><span class="line">direction：规定文本的书写方向</span><br><span class="line">color：文本颜色</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>元素可见性：visibility</p>
+</li>
+<li>表格布局属性：caption-side、border-collapse、border-spacing、empty-cells、table-layout</li>
+<li>列表布局属性：list-style-type、list-style-image、list-style-position、list-style</li>
+<li>生成内容属性：quotes</li>
+<li>光标属性：cursor</li>
+<li>页面样式属性：page、page-break-inside、windows、orphans</li>
+<li>声音样式属性：speak、speak-punctuation、speak-numeral、speak-header、speech-rate、volume、voice-family、pitch、pitch-range、stress、richness、、azimuth、elevation</li>
+</ol>
+<h2 id="三、所有元素可以继承的属性"><a href="#三、所有元素可以继承的属性" class="headerlink" title="三、所有元素可以继承的属性"></a><strong>三、所有元素可以继承的属性</strong></h2><ol>
+<li>元素可见性：visibility</li>
+<li>光标属性：cursor</li>
+</ol>
+<h2 id="四、内联元素可以继承的属性"><a href="#四、内联元素可以继承的属性" class="headerlink" title="四、内联元素可以继承的属性"></a><strong>四、内联元素可以继承的属性</strong></h2><ol>
+<li>字体系列属性</li>
+<li>除text-indent、text-align之外的文本系列属性</li>
+</ol>
+<h2 id="五、块级元素可以继承的属"><a href="#五、块级元素可以继承的属" class="headerlink" title="五、块级元素可以继承的属"></a><strong>五、块级元素可以继承的属</strong></h2><ol>
+<li>text-indent、text-align</li>
+</ol>
+<h1 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h1><h2 id="如何让块级元素水平居中？如何让行内元素水平居中"><a href="#如何让块级元素水平居中？如何让行内元素水平居中" class="headerlink" title="如何让块级元素水平居中？如何让行内元素水平居中?"></a>如何让块级元素水平居中？如何让行内元素水平居中?</h2><blockquote>
+<p>行内元素元素水平居中：text-align:center<br>块级元素水平居中：margin左右设置为auto</p>
+</blockquote>
+<p><a href="http://js.jirengu.com/betipuwoqu/3/edit" target="_blank" rel="noopener">demo</a></p>
+<h2 id="用-CSS-实现一个三角形"><a href="#用-CSS-实现一个三角形" class="headerlink" title="用 CSS 实现一个三角形"></a>用 CSS 实现一个三角形</h2><blockquote>
+<p>充分利用边框的作用</p>
+</blockquote>
+<h2 id="单行文本溢出加-…如何实现"><a href="#单行文本溢出加-…如何实现" class="headerlink" title="单行文本溢出加 …如何实现?"></a>单行文本溢出加 …如何实现?</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">white-space: nowrap;</span><br><span class="line">overflow: hidden;</span><br><span class="line">text-overflow: ellipsis;</span><br></pre></td></tr></table></figure>
+<p><a href="http://js.jirengu.com/xabobowazi/1/edit" target="_blank" rel="noopener">demo</a></p>
+<h2 id="px-em-rem-有什么区别"><a href="#px-em-rem-有什么区别" class="headerlink" title="px, em, rem 有什么区别"></a>px, em, rem 有什么区别</h2><p>px： 固定单位<br>em: 相对单位，相对于父元素字体大小<br>rem: 相对单位，相对于根元素(html)字体大小<br>vw vh: 相对单位，1vw 为屏幕宽度的1% <a href="http://caniuse.com/#search=vw" target="_blank" rel="noopener">兼容性</a></p>
+<h2 id="解释下面代码的作用-为什么要加引号-字体里-5b8b-4f53代表什么"><a href="#解释下面代码的作用-为什么要加引号-字体里-5b8b-4f53代表什么" class="headerlink" title="解释下面代码的作用?为什么要加引号? 字体里\5b8b\4f53代表什么?"></a>解释下面代码的作用?为什么要加引号? 字体里\5b8b\4f53代表什么?</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">body&#123;</span><br><span class="line">  font: 12px/1.5 tahoma,arial,&apos;Hiragino Sans GB&apos;,&apos;\5b8b\4f53&apos;,sans-serif;</span><br><span class="line">  &lt;!--设置body内字体的样式：1. --&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>设置body内字体的样式：</p>
+<ol>
+<li><strong>12px/1.5：</strong>字体大小为12px，行高为字体大小的1.5倍</li>
+<li><strong>tahoma,arial,’Hiragino Sans GB’,’\5b8b\4f53’,sans-serif：</strong>分别是指不同的字体，每个逗号分隔开一个字体；’Hiragino Sans GB’加引号是因为这款字体的名字中间有空格，需要加引号分辨出示一款字体的名字，而不是多款字体；’\5b8b\4f53’是十六进制的表达方式，多数用在表示中文字体上，5b8b表示“宋”字，4f53表示“体”字。</li>
+</ol>
+<h2 id="编程题"><a href="#编程题" class="headerlink" title="编程题"></a>编程题</h2><ol>
+<li><a href="http://js.jirengu.com/defoqemuxu/3/edit" target="_blank" rel="noopener">盒子</a></li>
+<li><a href="http://js.jirengu.com/fuyikebaga/3/edit" target="_blank" rel="noopener">按钮</a></li>
+<li><a href="http://js.jirengu.com/vefasoyoha/2/edit" target="_blank" rel="noopener">表格</a></li>
+<li><a href="http://js.jirengu.com/holihabiye/3/edit" target="_blank" rel="noopener">三角形</a></li>
+<li><a href="http://js.jirengu.com/nujesavama/4/edit" target="_blank" rel="noopener">卡片</a></li>
+<li><a href="http://js.jirengu.com/dacogeviqi/4/edit" target="_blank" rel="noopener">小三角</a></li>
+</ol>
+
+      
+      
+        <div class="page-reward">
+          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang">赏</a></p>
+          <div class="hide_box"></div>
+          <div class="shang_box">
+            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+            <div class="shang_tit">
+              <p>纯属好玩</p>
+            </div>
+            <div class="shang_payimg">
+              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+            </div>
+              <div class="pay_explain">扫码打赏，你说多少就多少</div>
+            <div class="shang_payselect">
+              
+                <div class="pay_item checked" data-id="alipay">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/alipay.png" alt="支付宝" /></span>
+                </div>
+              
+              
+                <div class="pay_item" data-id="wechat">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/weixin.png" alt="微信" /></span>
+                </div>
+              
+            </div>
+            <div class="shang_info">
+              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <script type="text/javascript">
+          $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+          });
+          function dashangToggle(){
+            
+            $(".hide_box").fadeToggle();
+            $(".shang_box").fadeToggle();
+          }
+        </script>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/02/12/6/">CSS常见样式</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 YQY 的个人博客">YQY</a></p>
+        <p><span>发布时间:</span>2018年02月12日 - 14时20分</p>
+        <p><span>最后更新:</span>2018年08月13日 - 22时44分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/02/12/6/" title="CSS常见样式">http://yoursite.com/2018/02/12/6/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/02/12/6/　　作者: YQY" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/2018/02/12/7/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          CSS常见样式2
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/02/12/5/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS选择器</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#块级元素和行内元素分别有哪些？动手测试并列出4条以上的特性区别"><span class="toc-number">1.</span> <span class="toc-text">块级元素和行内元素分别有哪些？动手测试并列出4条以上的特性区别</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#块级元素："><span class="toc-number">1.1.</span> <span class="toc-text">块级元素：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#行内元素："><span class="toc-number">1.2.</span> <span class="toc-text">行内元素：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#特性区别"><span class="toc-number">1.3.</span> <span class="toc-text">特性区别:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#块级元素会独占一行-默认情况下-其宽度自动填满其父元素宽度"><span class="toc-number">1.3.1.</span> <span class="toc-text">块级元素会独占一行,默认情况下,其宽度自动填满其父元素宽度.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#块级-block-level-行内-内联、inline-level"><span class="toc-number">1.3.2.</span> <span class="toc-text">块级(block-level); 行内(内联、inline-level)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#另外"><span class="toc-number">1.3.3.</span> <span class="toc-text">另外</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#什么是-CSS-继承-哪些属性能继承，哪些不能？"><span class="toc-number">2.</span> <span class="toc-text">什么是 CSS 继承? 哪些属性能继承，哪些不能？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、无继承性的属性"><span class="toc-number">2.1.</span> <span class="toc-text">一、无继承性的属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、有继承性的属性"><span class="toc-number">2.2.</span> <span class="toc-text">二、有继承性的属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、所有元素可以继承的属性"><span class="toc-number">2.3.</span> <span class="toc-text">三、所有元素可以继承的属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、内联元素可以继承的属性"><span class="toc-number">2.4.</span> <span class="toc-text">四、内联元素可以继承的属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、块级元素可以继承的属"><span class="toc-number">2.5.</span> <span class="toc-text">五、块级元素可以继承的属</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#小技巧"><span class="toc-number">3.</span> <span class="toc-text">小技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#如何让块级元素水平居中？如何让行内元素水平居中"><span class="toc-number">3.1.</span> <span class="toc-text">如何让块级元素水平居中？如何让行内元素水平居中?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#用-CSS-实现一个三角形"><span class="toc-number">3.2.</span> <span class="toc-text">用 CSS 实现一个三角形</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#单行文本溢出加-…如何实现"><span class="toc-number">3.3.</span> <span class="toc-text">单行文本溢出加 …如何实现?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#px-em-rem-有什么区别"><span class="toc-number">3.4.</span> <span class="toc-text">px, em, rem 有什么区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解释下面代码的作用-为什么要加引号-字体里-5b8b-4f53代表什么"><span class="toc-number">3.5.</span> <span class="toc-text">解释下面代码的作用?为什么要加引号? 字体里\5b8b\4f53代表什么?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编程题"><span class="toc-number">3.6.</span> <span class="toc-text">编程题</span></a></li></ol></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+        <div id="gitments"></div>
+<script src="/js/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+      id: window.location.pathname,
+      owner: 'luuman',
+      repo: 'luuman.github.io',
+      oauth: {
+        client_id: '',
+        client_secret: '',
+      },
+    })
+    gitment.render('gitments')
+</script>
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2018/02/12/7/" title="上一篇: CSS常见样式2">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2018/02/12/5/" title="下一篇: CSS选择器">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/08/13/垂直居中/">垂直居中</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/12/">CSS规范</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/11/">浏览器兼容</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/10/">布局</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/9/">浮动定位BFC边距合并</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/8/">CSS样式</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/7/">CSS常见样式2</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/6/">CSS常见样式</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/5/">CSS选择器</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/4/">CSS简单入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/3/">Form 表单</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/2/">hexo + github 配置及错误解决</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/1/">从 URL 输入到页面展现发生了什么</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2018 YQY
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >海贼到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>
