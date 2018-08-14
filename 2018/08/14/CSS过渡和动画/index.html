@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>CSS过渡和动画 | YQY</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="过渡和动画过渡 在CSS3引入transition之前css没有时间轴，所有的状态变化都是瞬间完成">
+<meta name="keywords" content="技术,CSS,编程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS过渡和动画">
+<meta property="og:url" content="http://yoursite.com/2018/08/14/CSS过渡和动画/index.html">
+<meta property="og:site_name" content="YQY">
+<meta property="og:description" content="过渡和动画过渡 在CSS3引入transition之前css没有时间轴，所有的状态变化都是瞬间完成">
+<meta property="og:locale" content="zh-Ch">
+<meta property="og:updated_time" content="2018-08-14T14:10:57.282Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS过渡和动画">
+<meta name="twitter:description" content="过渡和动画过渡 在CSS3引入transition之前css没有时间轴，所有的状态变化都是瞬间完成">
+  
+    <link rel="alternative" href="/atom.xml" title="YQY" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">YQY</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">个人技术积累记录</p>
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/Home">博客首页</a></li>
+                        
+                            <li><a href="/works">作品展示</a></li>
+                        
+                            <li><a href="/about">留言打卡</a></li>
+                        
+                            <li><a href="/FrontEndGuide">前端导航</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=PAkNDgsKBQ4MCnxNTRJfU1E" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/luuman" title="github">github</a>
+                            
+                                <a class="fl zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+                            
+                                <a class="fl weibo" target="_blank" href="#" title="weibo">weibo</a>
+                            
+                                <a class="fl google" target="_blank" href="#" title="google">google</a>
+                            
+                                <a class="fl twitter" target="_blank" href="#" title="twitter">twitter</a>
+                            
+                                <a class="fl linkedin" target="_blank" href="#" title="linkedin">linkedin</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/CSS/" style="font-size: 16.67px;">CSS</a> <a href="/tags/HTTP/" style="font-size: 10px;">HTTP</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/技术/" style="font-size: 20px;">技术</a> <a href="/tags/编程/" style="font-size: 13.33px;">编程</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://luuman.github.io/">name</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">纯海迷、爱运动、爱交友、爱旅行、喜欢接触新鲜事物、迎接新的挑战，更爱游离于错综复杂的编码与逻辑中</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">YQY</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">YQY</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">个人技术积累记录</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/Home">博客首页</a></li>
+                
+                    <li><a href="/works">作品展示</a></li>
+                
+                    <li><a href="/about">留言打卡</a></li>
+                
+                    <li><a href="/FrontEndGuide">前端导航</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=PAkNDgsKBQ4MCnxNTRJfU1E" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/luuman" title="github">github</a>
+                    
+                        <a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+                    
+                        <a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+                    
+                        <a class="google" target="_blank" href="#" title="google">google</a>
+                    
+                        <a class="twitter" target="_blank" href="#" title="twitter">twitter</a>
+                    
+                        <a class="linkedin" target="_blank" href="#" title="linkedin">linkedin</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-CSS过渡和动画" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/08/14/CSS过渡和动画/" class="article-date">
+      <time datetime="2018-08-14T14:10:26.000Z" itemprop="datePublished">2018-08-14</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CSS过渡和动画
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/技术/">技术</a><a class="article-category-link" href="/categories/技术/前端/">前端</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编程/">编程</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="过渡和动画"><a href="#过渡和动画" class="headerlink" title="过渡和动画"></a>过渡和动画</h1><h2 id="过渡"><a href="#过渡" class="headerlink" title="过渡"></a>过渡</h2><blockquote>
+<p>在CSS3引入<code>transition</code>之前css没有时间轴，所有的状态变化都是瞬间完成</p>
+</blockquote>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">border:1px solid red;</span><br><span class="line">height:15px;</span><br><span class="line">width:15px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">div:hover&#123;</span><br><span class="line">height: 450px;</span><br><span class="line">width: 450px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>transition的作用在于，指定状态变化所需要的时间</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">  transition: 1s;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="指定属性"><a href="#指定属性" class="headerlink" title="指定属性"></a>指定属性</h3><p>我们还可以指定transition适用的属性，比如只适用于height</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transition: 1s height;</span><br></pre></td></tr></table></figure>
+<p>这样一来，只有height的变化需要1秒实现，其他变化（主要是width）依然瞬间实现，在同一行transition语句中，可以分别指定多个属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transition: 1s height, 1s width;</span><br></pre></td></tr></table></figure>
+<h3 id="delay"><a href="#delay" class="headerlink" title="delay"></a>delay</h3><p>但是，这样一来，height和width的变化是同时进行的，跟不指定它们没有差别，我们希望，让height先发生变化，等结束以后，再让width发生变化。实现这一点很容易，就是为width指定一个delay参数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transition: 1s height, 1s 1s width;</span><br></pre></td></tr></table></figure>
+<p>上面代码指定，width在1秒之后，再开始变化，也就是延迟（delay）1秒</p>
+<p>delay的真正意义在于，它指定了动画发生的顺序，使得多个不同的transition可以连在一起，形成复杂效果</p>
+<h3 id="transition-timing-function"><a href="#transition-timing-function" class="headerlink" title="transition-timing-function"></a>transition-timing-function</h3><p>transition的状态变化速度（又称timing function），默认不是匀速的，而是逐渐放慢，这叫做ease</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transition: 1s ease;</span><br></pre></td></tr></table></figure>
+<p>除了ease以外，其他模式还包括</p>
+<ul>
+<li>linear：匀速</li>
+<li>ease-in：加速</li>
+<li>ease-out：减速</li>
+<li>cubic-bezier函数：自定义速度模式 <a href="http://cubic-bezier.com/" title="null" target="_blank" rel="noopener">演示</a></li>
+</ul>
+<p>看个例子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transition: 1s height cubic-bezier(.83,.97,.05,1.44);</span><br></pre></td></tr></table></figure>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><p>transition的完整写法如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transition: 1s 1s height ease;</span><br></pre></td></tr></table></figure>
+<p>这其实是一个简写形式，可以单独定义成各个属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">transition-property: height;</span><br><span class="line">transition-duration: 1s;</span><br><span class="line">transition-delay: 1s;</span><br><span class="line">transition-timing-function: ease;</span><br></pre></td></tr></table></figure>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ol>
+<li>目前，各大浏览器（包括IE 10）都已经支持无前缀的transition，所以transition已经可以很安全地不加浏览器前缀</li>
+<li>transition需要明确知道，开始状态和结束状态的具体<code>数值</code>，才能计算出中间状态，<code>none</code>到<code>block</code>之类的是不行的</li>
+<li>transition是一次性的，不能重复发生，除非一再触发</li>
+</ol>
+<h2 id="animation"><a href="#animation" class="headerlink" title="animation"></a>animation</h2><p>transition 比较简单，animation可以帮我们实现复杂的动画，使用animation我们首先需要定义动画过程，也就是关键帧</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@keyframes rainbow &#123;</span><br><span class="line">  0% &#123; background: #c00; &#125;</span><br><span class="line">  50% &#123; background: orange; &#125;</span><br><span class="line">  100% &#123; background: yellowgreen; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>rainbow效果一共有三个状态，分别为起始（0%）、中点（50%）和结束（100%）。如果有需要，完全可以插入更多状态，值是每个状态下的属性值</p>
+<p>定义了关键帧之后就可以给DOM元素绑定动画了，和事件很像</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div:hover &#123;</span><br><span class="line">  animation: 1s rainbow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当鼠标悬停在div元素上时，会产生名为rainbow的动画效果，持续时间为1秒，默认情况下，动画只播放一次。加入infinite关键字，可以让动画无限次播放</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div:hover &#123;</span><br><span class="line">  animation: 1s rainbow infinite;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>也可以指定动画具体播放的次数，比如3次</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div:hover &#123;</span><br><span class="line">  animation: 1s rainbow 3;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><a href="http://lea.verou.me/css-4d/#heart-demo" title="null" target="_blank" rel="noopener">心跳demo</a></p>
+<h3 id="animation-fill-mode"><a href="#animation-fill-mode" class="headerlink" title="animation-fill-mode"></a>animation-fill-mode</h3><p>动画结束以后，会立即从结束状态跳回到起始状态。如果想让动画保持在结束状态，需要使用animation-fill-mode属性。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div:hover &#123;</span><br><span class="line">  animation: 1s rainbow forwards;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>animation-fill-mode可以使用下列值</p>
+<ul>
+<li>none：默认值，回到动画没开始时的状态</li>
+<li>forwards：让动画停留在结束状态</li>
+<li>backwards：让动画回到第一帧的状态</li>
+<li>both: 根据animation-direction（见后）轮流应用forwards和backwards规则</li>
+</ul>
+<h3 id="animation-direction"><a href="#animation-direction" class="headerlink" title="animation-direction"></a>animation-direction</h3><p>动画循环播放时，每次都是从结束状态跳回到起始状态，再开始播放。animation-direction属性，可以改变这种行为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@keyframes rainbow &#123;</span><br><span class="line">  0% &#123; background-color: yellow; &#125;</span><br><span class="line">  100% &#123; background: blue; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>默认情况是，animation-direction等于normal</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div:hover &#123;</span><br><span class="line">  animation: 1s rainbow 3 normal;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>此外，还可以等于取alternate、reverse、alternate-reverse等值。它们的含义见下图（假定动画连续播放三次）。</p>
+<p>简单说，animation-direction指定了动画播放的方向，最常用的值是normal和reverse。浏览器对其他值的支持情况不佳，应该慎用</p>
+<h3 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h3><p>同transition一样，animation也是一个简写形式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div:hover &#123;</span><br><span class="line">  animation: 1s 1s rainbow linear 3 forwards normal;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这是一个简写形式，可以分解成各个单独的属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">div:hover &#123;</span><br><span class="line">  animation-name: rainbow;</span><br><span class="line">  animation-duration: 1s;</span><br><span class="line">  animation-timing-function: linear;</span><br><span class="line">  animation-delay: 1s;</span><br><span class="line">  animation-fill-mode:forwards;</span><br><span class="line">  animation-direction: normal;</span><br><span class="line">  animation-iteration-count: 3;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>keyframes关键字用来定义动画的各个状态，它的写法相当自由</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@keyframes rainbow &#123;</span><br><span class="line">  0% &#123; background: #c00 &#125;</span><br><span class="line">  50% &#123; background: orange &#125;</span><br><span class="line">  100% &#123; background: yellowgreen &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>0%可以用from代表，100%可以用to代表，因此上面的代码等同于下面的形式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@keyframes rainbow &#123;</span><br><span class="line">  from &#123; background: #c00 &#125;</span><br><span class="line">  50% &#123; background: orange &#125;</span><br><span class="line">  to &#123; background: yellowgreen &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果省略某个状态，浏览器会自动推算中间状态，所以下面都是合法的写法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@keyframes rainbow &#123;</span><br><span class="line">  50% &#123; background: orange &#125;</span><br><span class="line">  to &#123; background: yellowgreen &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes rainbow &#123;</span><br><span class="line">  to &#123; background: yellowgreen &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>甚至，可以把多个状态写在一行。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@keyframes pound &#123;</span><br><span class="line">  from，to &#123; transform: none; &#125;</span><br><span class="line">  50% &#123; transform: scale(1.2); &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>另外一点需要注意的是，浏览器从一个状态向另一个状态过渡，是平滑过渡。steps函数可以实现分步过渡。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div:hover &#123;</span><br><span class="line">  animation: 1s rainbow infinite steps(10);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="animation-play-state"><a href="#animation-play-state" class="headerlink" title="animation-play-state"></a>animation-play-state</h3><p>有时，动画播放过程中，会突然停止。这时，默认行为是跳回到动画的开始状态，如果想让动画保持突然终止时的状态，就要使用animation-play-state属性。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">    animation: spin 1s linear infinite;</span><br><span class="line">    animation-play-state: paused;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">div:hover &#123;</span><br><span class="line">  animation-play-state: running;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p><a href="http://isux.tencent.com/css3/tools.html" title="null" target="_blank" rel="noopener">CSS3 Tool</a></p>
+
+      
+      
+        <div class="page-reward">
+          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang">赏</a></p>
+          <div class="hide_box"></div>
+          <div class="shang_box">
+            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+            <div class="shang_tit">
+              <p>纯属好玩</p>
+            </div>
+            <div class="shang_payimg">
+              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+            </div>
+              <div class="pay_explain">扫码打赏，你说多少就多少</div>
+            <div class="shang_payselect">
+              
+                <div class="pay_item checked" data-id="alipay">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/alipay.png" alt="支付宝" /></span>
+                </div>
+              
+              
+                <div class="pay_item" data-id="wechat">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/weixin.png" alt="微信" /></span>
+                </div>
+              
+            </div>
+            <div class="shang_info">
+              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <script type="text/javascript">
+          $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+          });
+          function dashangToggle(){
+            
+            $(".hide_box").fadeToggle();
+            $(".shang_box").fadeToggle();
+          }
+        </script>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/08/14/CSS过渡和动画/">CSS过渡和动画</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 YQY 的个人博客">YQY</a></p>
+        <p><span>发布时间:</span>2018年08月14日 - 22时10分</p>
+        <p><span>最后更新:</span>2018年08月14日 - 22时10分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/08/14/CSS过渡和动画/" title="CSS过渡和动画">http://yoursite.com/2018/08/14/CSS过渡和动画/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/08/14/CSS过渡和动画/　　作者: YQY" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2018/08/14/CSS3新特性/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS3新特性</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#过渡和动画"><span class="toc-number">1.</span> <span class="toc-text">过渡和动画</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#过渡"><span class="toc-number">1.1.</span> <span class="toc-text">过渡</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#指定属性"><span class="toc-number">1.1.1.</span> <span class="toc-text">指定属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#delay"><span class="toc-number">1.1.2.</span> <span class="toc-text">delay</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#transition-timing-function"><span class="toc-number">1.1.3.</span> <span class="toc-text">transition-timing-function</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#语法"><span class="toc-number">1.1.4.</span> <span class="toc-text">语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注意事项"><span class="toc-number">1.1.5.</span> <span class="toc-text">注意事项</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#animation"><span class="toc-number">1.2.</span> <span class="toc-text">animation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#animation-fill-mode"><span class="toc-number">1.2.1.</span> <span class="toc-text">animation-fill-mode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#animation-direction"><span class="toc-number">1.2.2.</span> <span class="toc-text">animation-direction</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#语法-1"><span class="toc-number">1.2.3.</span> <span class="toc-text">语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#animation-play-state"><span class="toc-number">1.2.4.</span> <span class="toc-text">animation-play-state</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#工具"><span class="toc-number">1.3.</span> <span class="toc-text">工具</span></a></li></ol></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+        <div id="gitments"></div>
+<script src="/js/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+      id: window.location.pathname,
+      owner: 'luuman',
+      repo: 'luuman.github.io',
+      oauth: {
+        client_id: '',
+        client_secret: '',
+      },
+    })
+    gitment.render('gitments')
+</script>
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2018/08/14/CSS3新特性/" title="下一篇: CSS3新特性">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/08/14/CSS过渡和动画/">CSS过渡和动画</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/14/CSS3新特性/">CSS3新特性</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/14/CSS小技巧/">CSS小技巧</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/13/垂直居中/">垂直居中</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/12/">CSS规范</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/11/">浏览器兼容</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/10/">布局</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/9/">浮动定位BFC边距合并</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/8/">CSS样式</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/7/">CSS常见样式2</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/6/">CSS常见样式</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/5/">CSS选择器</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/4/">CSS简单入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/3/">Form 表单</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/2/">hexo + github 配置及错误解决</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/1/">从 URL 输入到页面展现发生了什么</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2018 YQY
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >海贼到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>
