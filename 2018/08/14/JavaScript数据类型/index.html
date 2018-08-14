@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>YQY</title>
+  <title>JavaScript数据类型 | YQY</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="【Eat What You Kill !】">
-<meta property="og:type" content="website">
-<meta property="og:title" content="YQY">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="数据类型分类JavaScript语言的每一个值，都属于某一种数据类型。JavaScript的数据类型，共有六种。  数值（number）：整数和小数（比如1和3.14） 字符串（string）：字符组成的文本（比如”Hello World”） 布尔值（boolean）：true（真）和false（假）两个特定值 undefined：表示“未定义”或不存在，即此处目前没有任何值 null：表示空缺，">
+<meta name="keywords" content="技术,编程,JS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript数据类型">
+<meta property="og:url" content="http://yoursite.com/2018/08/14/JavaScript数据类型/index.html">
 <meta property="og:site_name" content="YQY">
-<meta property="og:description" content="【Eat What You Kill !】">
+<meta property="og:description" content="数据类型分类JavaScript语言的每一个值，都属于某一种数据类型。JavaScript的数据类型，共有六种。  数值（number）：整数和小数（比如1和3.14） 字符串（string）：字符组成的文本（比如”Hello World”） 布尔值（boolean）：true（真）和false（假）两个特定值 undefined：表示“未定义”或不存在，即此处目前没有任何值 null：表示空缺，">
 <meta property="og:locale" content="zh-Ch">
+<meta property="og:updated_time" content="2018-08-14T15:24:27.538Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="YQY">
-<meta name="twitter:description" content="【Eat What You Kill !】">
+<meta name="twitter:title" content="JavaScript数据类型">
+<meta name="twitter:description" content="数据类型分类JavaScript语言的每一个值，都属于某一种数据类型。JavaScript的数据类型，共有六种。  数值（number）：整数和小数（比如1和3.14） 字符串（string）：字符组成的文本（比如”Hello World”） 布尔值（boolean）：true（真）和false（假）两个特定值 undefined：表示“未定义”或不存在，即此处目前没有任何值 null：表示空缺，">
   
     <link rel="alternative" href="/atom.xml" title="YQY" type="application/atom+xml">
   
@@ -28,9 +30,6 @@
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
-    
-    
-  
   
       <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
   
@@ -42,8 +41,8 @@
           rootUrl: '/',
           fancybox: true,
           animate: true,
-          isHome: true,
-          isPost: false,
+          isHome: false,
+          isPost: true,
           isArchive: false,
           isTag: false,
           isCategory: false,
@@ -219,136 +218,7 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-JavaScript类型" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/08/14/JavaScript类型/" class="article-date">
-      <time datetime="2018-08-14T15:25:29.000Z" itemprop="datePublished">2018-08-14</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/14/JavaScript类型/">JavaScript类型</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h1 id="1-JavaScript-定义了几种数据类型-哪些是原始类型-哪些是复杂类型-原始类型和复杂类型的区别是什么"><a href="#1-JavaScript-定义了几种数据类型-哪些是原始类型-哪些是复杂类型-原始类型和复杂类型的区别是什么" class="headerlink" title="1.JavaScript 定义了几种数据类型? 哪些是原始类型?哪些是复杂类型?原始类型和复杂类型的区别是什么?"></a>1.JavaScript 定义了几种数据类型? 哪些是原始类型?哪些是复杂类型?原始类型和复杂类型的区别是什么?</h1><blockquote>
-<p>JavaScript语言的每一个值，都属于某一种数据类型。JavaScript的数据类型，共有六种。</p>
-<ol>
-<li>数值（number）：整数和小数（比如1和3.14）</li>
-<li>字符串（string）：字符组成的文本（比如”Hello World”）</li>
-<li>布尔值（boolean）：true（真）和false（假）两个特定值</li>
-<li>undefined：表示“未定义”或不存在，即此处目前没有任何值</li>
-<li>null：表示空缺，即此处应该有一个值，但目前为空</li>
-<li>对象（object）：各种值组成的集合</li>
-<li>symbol:一个symbol值能作为对象属性的标识符；这是该数据类型仅有的目的。</li>
-</ol>
-</blockquote>
-<p><strong>数值、字符串、布尔值称为原始类型（primitive type）的值，即它们是最基本的数据类型，不能再细分了。</strong></p>
-<p><strong>将对象称为复杂类型（complex type）的值，因为一个对象往往是多个原始类型的值的合成，可以看作是一个存放各种值的容器。</strong></p>
-<h1 id="2-typeof和instanceof的作用和区别"><a href="#2-typeof和instanceof的作用和区别" class="headerlink" title="2.typeof和instanceof的作用和区别?"></a>2.typeof和instanceof的作用和区别?</h1><p><strong>typeof</strong></p>
-<p><em>作用：</em> 是一个一元运算，放在一个变量之前，变量可以是任意类型。</p>
-<p>它返回值是一个字符串，该字符串说明变量的类型。typeof 一般只能返回如下几个结果：number,boolean,string,function,object,undefined。</p>
-<p>我们可以使用 typeof 来获取一个变量是否存在，如 if(typeof a!=”undefined”){alert(“ok”)}，而不要去使用 if(a) 因为如果 a 不存在（未声明）则会出错。</p>
-<p><em>区别：</em> <strong>对于 Array,Null 等特殊对象使用 typeof 一律返回 object，这正是 typeof 的局限</strong>性。</p>
-<blockquote>
-<p><strong>instanceof</strong><br>作用返回的是一个布尔值，判断该变量是否某一类型。如：<br>var a = {};<br>alert(a instanceof Object);  //true<br>var b = [];<br>alert(b instanceof Array);  //true<br><em>区别：</em>需要注意的是，instanceof只能用来判断对象和函数，不能用来判断字符串和数字等.但是，<strong>用instanceof可以判断变量是否为数组</strong></p>
-</blockquote>
-<h1 id="3-如何判断一个变量是否是数字、字符串、布尔、函数"><a href="#3-如何判断一个变量是否是数字、字符串、布尔、函数" class="headerlink" title="3.如何判断一个变量是否是数字、字符串、布尔、函数"></a>3.如何判断一个变量是否是数字、字符串、布尔、函数</h1><p>用typeof操作符<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">alert(typeof(1));//number</span><br><span class="line">alert(typeof(&quot;abc&quot;));//string</span><br><span class="line">alert(typeof(true));//boolean</span><br><span class="line">alert(typeof function()&#123;&#125;); // &apos;function&apos;</span><br></pre></td></tr></table></figure></p>
-<h1 id="4-NaN是什么-有什么特别之处"><a href="#4-NaN是什么-有什么特别之处" class="headerlink" title="4.NaN是什么? 有什么特别之处?"></a>4.NaN是什么? 有什么特别之处?</h1><blockquote>
-<p>NaN含义是Not a Number，表示非数字，NaN和任何值都不相等，包括自己</p>
-</blockquote>
-<p><strong>特别：</strong> 任何NaN的值进行操作都会返回一个NaN,其次，NaN与任何值都不相等即NaN === NaN也是false.</p>
-<h1 id="5-如何把非数值转化为数值"><a href="#5-如何把非数值转化为数值" class="headerlink" title="5.如何把非数值转化为数值?"></a>5.如何把非数值转化为数值?</h1><p>parseInt() 函数可解析一个字符串，并返回一个整数。<br><code>parseInt(&quot;10&quot;);            //返回 10</code></p>
-<h2 id="1-Number-函数"><a href="#1-Number-函数" class="headerlink" title="1.  Number()函数"></a>1.  Number()函数</h2><ul>
-<li>如果是 Boolean 值，true 和 false 将分别被转换为 1 和0；</li>
-<li>如果是数字值，只是简单的传入和返回；</li>
-<li>如来是null 值，返回 0；</li>
-<li>如果是 undefined，返回NaN ；</li>
-<li>如果是字符串，遵循下列规则：</li>
-<li>如果字符串中只包含数字，则将其转换为十进制数值，即”1”会变成1 ， “123”会变成123，而”011”会变成11（注意，前导的0被忽略了）；</li>
-<li>如果字符串中包含有效的浮点格式， 如”1.1”，则将其转换为对应的浮点数值（同样，也会忽略前导零）；</li>
-<li>如果字符串中包含有效的十六进制格式，例如”0xf”，则将其转换为相同大小的十进制整数值；<br>如果字符串是空的（不包含任何字符） ，则将其转换为0；<br>如果字符串中包含除上述格式之外的字符，则将其转换为 NaN。</li>
-<li>如果是对象，则调用对象的 valueOf() 方法，然后依照前面的规则转换返回的值。如果转换的结果是 NaN，则调用对象的 toString() 方法，然后再次依照前面的规则转换返回的字符串值。</li>
-</ul>
-<h2 id="2-parseInt"><a href="#2-parseInt" class="headerlink" title="2. parseInt()"></a>2. parseInt()</h2><p>由于Number()函数在转换字符串的时候比较复杂而且不够合理，因此在处理整数的时候更常用的是parseInt()。</p>
-<p>parselnt() 函数在转换字符串时，更多的是看其是否符合数值模式，它会忽略字符串前面的空格，直至找到第一个非空格字符；</p>
-<p>如果第一个字符不是数字字符或者负号，parseInt() 就会返回 NaN；也就是说，用parselnt() 转换空字符时会返回 NaN（Nurnber() 对空字符返回 0）； </p>
-<p>如果第一个字符是数字字符，parselnt() 会继续解析第二个字符，直到解析完所有后续字符或者遇到了一个非数字字符。</p>
-<p>例如，”1234blue”会被转换为1234 ，因为”blue”会被完全忽略；类似地，”‘22.5”会被转换为22 ，因为小数点并不是有效的数字字符。</p>
-<h2 id="3-parseFloat"><a href="#3-parseFloat" class="headerlink" title="3. parseFloat()"></a>3. parseFloat()</h2><p>与 parseInt () 函数类似，parseFloat () 也是从第一个字符（位置0）开始解析每个字符。而且也是一直解析到字符串末尾，或者解析到遇见一个无效的浮点数字字符为止。</p>
-<p>也就是说，字符串中的第一个小数点是有效的，而第二个小数点就是无效的了，因此它后面的字符串将被忽略。举例来说，”22.34.5”将会被转换为22.34 。</p>
-<h1 id="6-与-有什么区别"><a href="#6-与-有什么区别" class="headerlink" title="6.==与===有什么区别"></a>6.==与===有什么区别</h1><p><strong>== 相等</strong></p>
-<p><strong>=== 严格相等</strong></p>
-<p><a href="http://blog.csdn.net/lmwyc123/article/details/46918749" target="_blank" rel="noopener">详细参考</a></p>
-<h1 id="7-break与continue有什么区别"><a href="#7-break与continue有什么区别" class="headerlink" title="7.break与continue有什么区别"></a>7.break与continue有什么区别</h1><blockquote>
-<p>break 用于强制退出循环体，执行循环后面的语句<br>continue 用于退出本次循环，执行下次循环</p>
-</blockquote>
-<h1 id="8-void-0-和-undefined在使用场景上有什么区别"><a href="#8-void-0-和-undefined在使用场景上有什么区别" class="headerlink" title="8.void 0 和 undefined在使用场景上有什么区别"></a>8.void 0 和 undefined在使用场景上有什么区别</h1><blockquote>
-<p>undefined在某些场景例如函数内是可以被赋值，而void 0 则只会返回undefined。</p>
-</blockquote>
-<h1 id="9-以下代码的输出结果是-为什么"><a href="#9-以下代码的输出结果是-为什么" class="headerlink" title="9.以下代码的输出结果是?为什么?"></a>9.以下代码的输出结果是?为什么?</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">console.log(1+1);    //2    （数值相加）</span><br><span class="line">console.log(&quot;2&quot;+&quot;4&quot;);  //24    （2,4均为字符串，+连接字符串）</span><br><span class="line">console.log(2+&quot;4&quot;);  //24  （4为字符串，2为数值，此代码会转换2为字符串然后连接）</span><br><span class="line">console.log(+&quot;4&quot;);  //4     （+号强制转换为数值）</span><br></pre></td></tr></table></figure>
-<h1 id="10-以下代码的输出结果是"><a href="#10-以下代码的输出结果是" class="headerlink" title="10. 以下代码的输出结果是?"></a>10. 以下代码的输出结果是?</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var a = 1;  </span><br><span class="line">a+++a;  </span><br><span class="line">typeof a+2;    //number2</span><br><span class="line">/* (a++)+a=1+2;   </span><br><span class="line">(typeof a)+2=number2  */</span><br></pre></td></tr></table></figure>
-<h1 id="11-以下代码的输出结果是-为什么"><a href="#11-以下代码的输出结果是-为什么" class="headerlink" title="11. 以下代码的输出结果是? 为什么"></a>11. 以下代码的输出结果是? 为什么</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> var a = 1;</span><br><span class="line"> var b = 3;</span><br><span class="line"> console.log( a+++b );    //4</span><br><span class="line">/   (a++)+b=1+3=4</span><br></pre></td></tr></table></figure>
-<h1 id="12-遍历数组，把数组里的打印数组每一项的平方"><a href="#12-遍历数组，把数组里的打印数组每一项的平方" class="headerlink" title="12. 遍历数组，把数组里的打印数组每一项的平方"></a>12. 遍历数组，把数组里的打印数组每一项的平方</h1><p><code>var arr = [3,4,5]</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr=[3,4,5];</span><br><span class="line">for(var i = 0; i&lt;arr.length;i++)&#123;</span><br><span class="line">    console.log(arr[i]*arr[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="13-遍历-JSON-打印里面的值"><a href="#13-遍历-JSON-打印里面的值" class="headerlink" title="13. 遍历 JSON, 打印里面的值"></a>13. 遍历 JSON, 打印里面的值</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;</span><br><span class="line"> name: &apos;hunger&apos;, </span><br><span class="line"> sex: &apos;male&apos;, </span><br><span class="line"> age: 28 </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;</span><br><span class="line">            name: &apos;hunger&apos;, </span><br><span class="line">            sex: &apos;male&apos;, </span><br><span class="line">            age: 28 </span><br><span class="line">        &#125;</span><br><span class="line">for(key in obj)&#123;</span><br><span class="line">    console.log(key+&quot;:&quot;+obj[key]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="14-以下代码输出结果是-为什么-（选做题目）"><a href="#14-以下代码输出结果是-为什么-（选做题目）" class="headerlink" title="14. 以下代码输出结果是? 为什么 （选做题目）"></a>14. 以下代码输出结果是? 为什么 （选做题目）</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var a = 1, b = 2, c = 3;               //number2</span><br><span class="line">var val = typeof a + b || c &gt;0      </span><br><span class="line">console.log(val)            </span><br><span class="line"> /*  val = (typeof a) + [ b || ( c &gt; 0 ) ]          </span><br><span class="line"> typeof a ==&gt; number;          c &gt; 0 ==&gt; true;      2 ||   true ==&gt;  true</span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var d = 5;                                             // bb</span><br><span class="line">var data = d ==5 &amp;&amp; console.log(&apos;bb&apos;)  </span><br><span class="line">console.log(data)</span><br><span class="line">/*   data =  ( d == 5 )  &amp;&amp; console.log(&quot;bb&quot;)  </span><br><span class="line">   d == 5  ==&gt;  true ;       </span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var data2 = d = 0 || console.log(&apos;haha&apos;)                   //haha</span><br><span class="line">console.log(data2)</span><br><span class="line">/*  data2 = [ d =(  0 || console.log(&apos;haha&apos;)   ) ]</span><br><span class="line">0 ==&gt;false   ;   d=console.log(&quot;haha&quot;)   ;data2 = d = haha</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var x = !!&quot;Hello&quot; + (!&quot;world&quot;, !!&quot;from here!!&quot;);     //2</span><br><span class="line">console.log(x)</span><br><span class="line">/* x = (!!&quot;Hello&quot;) + (!&quot;world&quot;, !!&quot;from here!!&quot;); </span><br><span class="line">(!!&quot;Hello&quot;)   ==&gt;true ;      (!&quot;world&quot;, !!&quot;from here!!&quot;)  ==&gt; true  ;  x=  true +true = 2</span><br></pre></td></tr></table></figure>
-
-      
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/技术/">技术</a><a class="article-category-link" href="/categories/技术/前端/">前端</a><a class="article-category-link" href="/categories/技术/前端/JS基础/">JS基础</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编程/">编程</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-JavaScript数据类型" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-JavaScript数据类型" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2018/08/14/JavaScript数据类型/" class="article-date">
@@ -364,12 +234,27 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/14/JavaScript数据类型/">JavaScript数据类型</a>
+    <h1 class="article-title" itemprop="name">
+      JavaScript数据类型
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/技术/">技术</a><a class="article-category-link" href="/categories/技术/前端/">前端</a><a class="article-category-link" href="/categories/技术/前端/JS基础/">JS基础</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编程/">编程</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -447,603 +332,201 @@ var b = .45;
 
       
       
-    </div>
-    
-    <div class="article-info article-info-index">
+        <div class="page-reward">
+          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang">赏</a></p>
+          <div class="hide_box"></div>
+          <div class="shang_box">
+            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+            <div class="shang_tit">
+              <p>纯属好玩</p>
+            </div>
+            <div class="shang_payimg">
+              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+            </div>
+              <div class="pay_explain">扫码打赏，你说多少就多少</div>
+            <div class="shang_payselect">
+              
+                <div class="pay_item checked" data-id="alipay">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/alipay.jpg" alt="支付宝" /></span>
+                </div>
+              
+              
+                <div class="pay_item" data-id="wechat">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/weixin.jpg" alt="微信" /></span>
+                </div>
+              
+            </div>
+            <div class="shang_info">
+              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <script type="text/javascript">
+          $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+          });
+          function dashangToggle(){
+            
+            $(".hide_box").fadeToggle();
+            $(".shang_box").fadeToggle();
+          }
+        </script>
       
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/技术/">技术</a><a class="article-category-link" href="/categories/技术/前端/">前端</a><a class="article-category-link" href="/categories/技术/前端/JS基础/">JS基础</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编程/">编程</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
     </div>
     
   </div>
   
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-初步了解JavaScript" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/08/14/初步了解JavaScript/" class="article-date">
-      <time datetime="2018-08-14T14:53:51.000Z" itemprop="datePublished">2018-08-14</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/14/初步了解JavaScript/">初步了解JavaScript</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h1><p>javascript !== java</p>
-<p><strong>是客户端脚本语言</strong><br>ECMAScript, DOM, BOM, NodeJS<br><img src="http://upload-images.jianshu.io/upload_images/8353883-339d537eb4afe703.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ff"></p>
-          
-      
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/技术/">技术</a><a class="article-category-link" href="/categories/技术/前端/">前端</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编程/">编程</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2018/08/14/初步了解JavaScript/#more">大航海 >></a>
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/08/14/JavaScript数据类型/">JavaScript数据类型</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 YQY 的个人博客">YQY</a></p>
+        <p><span>发布时间:</span>2018年08月14日 - 23时17分</p>
+        <p><span>最后更新:</span>2018年08月14日 - 23时24分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/08/14/JavaScript数据类型/" title="JavaScript数据类型">http://yoursite.com/2018/08/14/JavaScript数据类型/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/08/14/JavaScript数据类型/　　作者: YQY" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-CSS过渡和动画" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/08/14/CSS过渡和动画/" class="article-date">
-      <time datetime="2018-08-14T14:10:26.000Z" itemprop="datePublished">2018-08-14</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/14/CSS过渡和动画/">CSS过渡和动画</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="过渡和动画"><a href="#过渡和动画" class="headerlink" title="过渡和动画"></a>过渡和动画</h1><h2 id="过渡"><a href="#过渡" class="headerlink" title="过渡"></a>过渡</h2><blockquote>
-<p>在CSS3引入<code>transition</code>之前css没有时间轴，所有的状态变化都是瞬间完成</p>
-</blockquote>
-          
-      
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/技术/">技术</a><a class="article-category-link" href="/categories/技术/前端/">前端</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编程/">编程</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2018/08/14/CSS过渡和动画/#more">大航海 >></a>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
         </p>
-      
-      <div class="clearfix"></div>
     </div>
-    
-  </div>
+
+
+
+<nav id="article-nav">
   
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-CSS3新特性" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/08/14/CSS3新特性/" class="article-date">
-      <time datetime="2018-08-14T14:09:27.000Z" itemprop="datePublished">2018-08-14</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+    <a href="/2018/08/14/JavaScript类型/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/14/CSS3新特性/">CSS3新特性</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="写出如下-CSS3效果的简单事例"><a href="#写出如下-CSS3效果的简单事例" class="headerlink" title="写出如下 CSS3效果的简单事例"></a>写出如下 CSS3效果的简单事例</h1><p><a href="http://js.jirengu.com/yuvuqopine/4" target="_blank" rel="noopener">demo</a></p>
-<ol>
-<li>圆角， 圆形</li>
-<li>div 阴影</li>
-<li>2D 转换：放大、缩小、偏移、旋转</li>
-<li>3D 转换：移动、旋转</li>
-<li>背景色渐变</li>
-<li>过渡效果</li>
-<li>动画</li>
-</ol>
-          
-      
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/技术/">技术</a><a class="article-category-link" href="/categories/技术/前端/">前端</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编程/">编程</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2018/08/14/CSS3新特性/#more">大航海 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-CSS小技巧" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/08/14/CSS小技巧/" class="article-date">
-      <time datetime="2018-08-14T14:08:43.000Z" itemprop="datePublished">2018-08-14</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+          JavaScript类型
         
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/14/CSS小技巧/">CSS小技巧</a>
-    </h1>
   
+    <a href="/2018/08/14/初步了解JavaScript/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">初步了解JavaScript</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>#小技巧</p>
-          
-      
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/技术/">技术</a><a class="article-category-link" href="/categories/技术/前端/">前端</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编程/">编程</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2018/08/14/CSS小技巧/#more">大航海 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
   
 </article>
 
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#数据类型分类"><span class="toc-number">1.</span> <span class="toc-text">数据类型分类</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#原始类型和复杂类型"><span class="toc-number">2.</span> <span class="toc-text">原始类型和复杂类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined和null的区别"><span class="toc-number">2.1.</span> <span class="toc-text">undefined和null的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null和undefined用法和含义"><span class="toc-number">2.2.</span> <span class="toc-text">null和undefined用法和含义</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#布尔值-Boolean"><span class="toc-number">3.</span> <span class="toc-text">布尔值 Boolean</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数值（number）"><span class="toc-number">4.</span> <span class="toc-text">数值（number）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#空对象和空数组的转换"><span class="toc-number">5.</span> <span class="toc-text">空对象和空数组的转换</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#浮点数"><span class="toc-number">6.</span> <span class="toc-text">浮点数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#typeof运算符"><span class="toc-number">7.</span> <span class="toc-text">typeof运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-原始类型"><span class="toc-number">7.1.</span> <span class="toc-text">1. 原始类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-函数"><span class="toc-number">7.2.</span> <span class="toc-text">2. 函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-undefined"><span class="toc-number">7.3.</span> <span class="toc-text">3.undefined</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-其他"><span class="toc-number">7.4.</span> <span class="toc-text">4.其他</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#区分数组和对象"><span class="toc-number">8.</span> <span class="toc-text">区分数组和对象</span></a></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
 
 
 
 
 
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 
 
-  
-    <article id="post-垂直居中" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/08/13/垂直居中/" class="article-date">
-      <time datetime="2018-08-13T15:23:51.000Z" itemprop="datePublished">2018-08-13</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
+
     
-      <input type="hidden" class="isFancy" />
+        <div id="gitments"></div>
+<script src="/js/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+      id: window.location.pathname,
+      owner: 'YQY',
+      repo: 'silvia-yqy.github.io/#',
+      oauth: {
+        client_id: '',
+        client_secret: '',
+      },
+    })
+    gitment.render('gitments')
+</script>
     
-    
-      <header class="article-header">
+
+
+
+    <div class="scroll" id="post-nav-button">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/13/垂直居中/">垂直居中</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="CSS实现垂直居中的N种方法"><a href="#CSS实现垂直居中的N种方法" class="headerlink" title="CSS实现垂直居中的N种方法"></a>CSS实现垂直居中的N种方法</h1>
-          
-      
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/技术/">技术</a><a class="article-category-link" href="/categories/技术/前端/">前端</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编程/">编程</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2018/08/13/垂直居中/#more">大航海 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-12" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/02/12/12/" class="article-date">
-      <time datetime="2018-02-12T12:32:32.000Z" itemprop="datePublished">2018-02-12</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+            <a href="/2018/08/14/JavaScript类型/" title="上一篇: JavaScript类型">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/12/12/">CSS规范</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="语义化"><a href="#语义化" class="headerlink" title="语义化"></a>语义化</h1><ol>
-<li>语义化标签优先</li>
-<li>基于功能命名、基于内容命名、基于表现命名</li>
-<li>简略、明了、无后患</li>
-</ol>
-          
-      
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/技术/">技术</a><a class="article-category-link" href="/categories/技术/前端/">前端</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2018/02/12/12/#more">大航海 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-11" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/02/12/11/" class="article-date">
-      <time datetime="2018-02-12T07:39:42.000Z" itemprop="datePublished">2018-02-12</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/12/11/">浏览器兼容</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="为什么会有浏览器兼容问题"><a href="#为什么会有浏览器兼容问题" class="headerlink" title="为什么会有浏览器兼容问题"></a>为什么会有浏览器兼容问题</h1><ol>
-<li>同一产品，版本越老 bug 越多</li>
-<li>同一产品，版本越新，功能越多</li>
-<li>不同产品，不同标准，不同实现方式</li>
-</ol>
-          
-      
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/技术/">技术</a><a class="article-category-link" href="/categories/技术/前端/">前端</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2018/02/12/11/#more">大航海 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-10" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/02/12/10/" class="article-date">
-      <time datetime="2018-02-12T06:45:14.000Z" itemprop="datePublished">2018-02-12</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+            <a href="/2018/08/14/初步了解JavaScript/" title="下一篇: 初步了解JavaScript">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/12/10/">布局</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="什么是布局"><a href="#什么是布局" class="headerlink" title="什么是布局"></a>什么是布局</h1><p><strong>现有样式不能满足人们的需求</strong></p>
-<ol>
-<li>文档流</li>
-<li>浮动</li>
-<li>定位
-          
-      
-      
     </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/技术/">技术</a><a class="article-category-link" href="/categories/技术/前端/">前端</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2018/02/12/10/#more">大航海 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/08/14/JavaScript类型/">JavaScript类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/14/JavaScript数据类型/">JavaScript数据类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/14/初步了解JavaScript/">初步了解JavaScript</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/14/CSS过渡和动画/">CSS过渡和动画</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/14/CSS3新特性/">CSS3新特性</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/14/CSS小技巧/">CSS小技巧</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/13/垂直居中/">垂直居中</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/12/">CSS规范</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/11/">浏览器兼容</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/10/">布局</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/9/">浮动定位BFC边距合并</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/8/">CSS样式</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/7/">CSS常见样式2</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/6/">CSS常见样式</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/5/">CSS选择器</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/4/">CSS简单入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/3/">Form 表单</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/2/">hexo + github 配置及错误解决</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/1/">从 URL 输入到页面展现发生了什么</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
 
 
 
-
-
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
-  
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
