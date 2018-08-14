@@ -3,20 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>hexo + github 配置及错误解决 | YQY</title>
+  <title>初步了解JavaScript | YQY</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="下个月开始要准备找工作了，所以最近需要建个博客，这样到时候面试就可以show一手啦。但素呢，特喵的！！！hexo+github搭建，可以说非常简单，也可以说是非常难。整整用了我一天的时间，所以我必须要记录一下。免得以后再次出错忘记怎么弄了。【此教程默认已安装git Bash，nodejs，且已注册github，并绑定ssh key】">
-<meta name="keywords" content="技术,hexo,github">
+  <meta name="description" content="javascriptjavascript !== java 是客户端脚本语言ECMAScript, DOM, BOM, NodeJS">
+<meta name="keywords" content="技术,编程,JS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo + github 配置及错误解决">
-<meta property="og:url" content="http://yoursite.com/2018/02/12/2/index.html">
+<meta property="og:title" content="初步了解JavaScript">
+<meta property="og:url" content="http://yoursite.com/2018/08/14/初步了解JavaScript/index.html">
 <meta property="og:site_name" content="YQY">
-<meta property="og:description" content="下个月开始要准备找工作了，所以最近需要建个博客，这样到时候面试就可以show一手啦。但素呢，特喵的！！！hexo+github搭建，可以说非常简单，也可以说是非常难。整整用了我一天的时间，所以我必须要记录一下。免得以后再次出错忘记怎么弄了。【此教程默认已安装git Bash，nodejs，且已注册github，并绑定ssh key】">
+<meta property="og:description" content="javascriptjavascript !== java 是客户端脚本语言ECMAScript, DOM, BOM, NodeJS">
 <meta property="og:locale" content="zh-Ch">
-<meta property="og:updated_time" content="2018-08-13T14:44:58.876Z">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/8353883-339d537eb4afe703.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/8353883-a589787f0c0f4e8d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/8353883-1b0479f3a534e03f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-08-14T14:54:48.595Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo + github 配置及错误解决">
-<meta name="twitter:description" content="下个月开始要准备找工作了，所以最近需要建个博客，这样到时候面试就可以show一手啦。但素呢，特喵的！！！hexo+github搭建，可以说非常简单，也可以说是非常难。整整用了我一天的时间，所以我必须要记录一下。免得以后再次出错忘记怎么弄了。【此教程默认已安装git Bash，nodejs，且已注册github，并绑定ssh key】">
+<meta name="twitter:title" content="初步了解JavaScript">
+<meta name="twitter:description" content="javascriptjavascript !== java 是客户端脚本语言ECMAScript, DOM, BOM, NodeJS">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/8353883-339d537eb4afe703.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="YQY" type="application/atom+xml">
   
@@ -218,11 +222,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-2" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-初步了解JavaScript" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/02/12/2/" class="article-date">
-      <time datetime="2018-02-12T05:47:53.000Z" itemprop="datePublished">2018-02-12</time>
+      <a href="/2018/08/14/初步了解JavaScript/" class="article-date">
+      <time datetime="2018-08-14T14:53:51.000Z" itemprop="datePublished">2018-08-14</time>
 </a>
     </div>
   
@@ -235,7 +239,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      hexo + github 配置及错误解决
+      初步了解JavaScript
     </h1>
   
 
@@ -250,7 +254,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编程/">编程</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -260,67 +264,85 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>下个月开始要准备找工作了，所以最近需要建个博客，这样到时候面试就可以show一手啦。但素呢，特喵的！！！hexo+github搭建，可以说非常简单，也可以说是非常难。整整用了我一天的时间，所以我必须要记录一下。免得以后再次出错忘记怎么弄了。<br>【此教程默认已安装git Bash，nodejs，且已注册github，并绑定ssh key】</p>
+        <h1 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h1><p>javascript !== java</p>
+<p><strong>是客户端脚本语言</strong><br>ECMAScript, DOM, BOM, NodeJS<br><img src="http://upload-images.jianshu.io/upload_images/8353883-339d537eb4afe703.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ff"></p>
 <a id="more"></a>
-<p><strong><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">文档是宝典，多看</a></strong></p>
-<p>#正常模式（对于电脑第一次安装部署hexo的）</p>
+<h1 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h1><p>JavaScript引擎的工作方式是，先解析代码，获取所有被声明的变量，然后再一行一行地运行。这造成的结果，就是所有的变量的声明语句，都会被提升到代码的头部，这就叫做变量提升</p>
+<p>我们写了一个赋值语句</p>
+<p><code>var a = 2;</code></p>
+<p>实际上执行过程是解释器在未执行的时候先解析出变量声明，然后给他初始值undefined，然后才逐句执行程序<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var a;</span><br><span class="line">a = 2;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p><strong>网页的构成</strong><br>网页 = Html+CSS+JavaScript<br>Html: 网页元素内容<br>CSS: 控制网页样式<br>JavaScript：操作网页内容，实现功能或者效果</p>
+</blockquote>
+<h1 id="页面中引入js的几种方法"><a href="#页面中引入js的几种方法" class="headerlink" title="页面中引入js的几种方法"></a><a href="http://www.cnblogs.com/lonelybonze/p/javascript.html" target="_blank" rel="noopener">页面中引入js的几种方法</a></h1><p>通常大家最为熟悉的是一下两种方法：</p>
 <ol>
-<li>在github上创建一个仓库，名字为<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">silvia-YQY.github.io</span><br></pre></td></tr></table></figure>
-</li>
+<li>在页面中直接写入<code>&lt;script type=&quot;text/javascript&quot;&gt;js代码&lt;/script&gt;</code>。</li>
+<li>在页面中引入外部文件<code>&lt;script src=&quot;xx.js&quot;&gt;&lt;/script&gt;</code>。（最好在body最下面引入）</li>
 </ol>
-<p>可默认添加README.md</p>
+<h1 id="浏览器渲染机制（Chrome）"><a href="#浏览器渲染机制（Chrome）" class="headerlink" title="浏览器渲染机制（Chrome）"></a>浏览器渲染机制（Chrome）</h1><ol>
+<li>解析 HTML 标签, 构建 DOM 树</li>
+<li>解析 CSS 标签, 构建 CSSOM 树</li>
+<li>把 DOM 和 CSSOM 组合成 渲染树 (render tree)</li>
+<li>在渲染树的基础上进行布局, 计算每个节点的几何结构</li>
+<li>把每个节点绘制到屏幕上 (painting)</li>
+</ol>
+<p><img src="http://upload-images.jianshu.io/upload_images/8353883-a589787f0c0f4e8d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>浏览器的工作原理,可参考<a href="http://taligarsiel.com/Projects/howbrowserswork1.htm" target="_blank" rel="noopener">How browsers work</a></p>
+<h1 id="白屏问题"><a href="#白屏问题" class="headerlink" title="白屏问题"></a>白屏问题</h1><p>对于图片和CSS, 在加载时会并发加载(如一个域名下同时加载两个文件). 但在加载 JavaScript 时,会禁用并发,并且阻止其他内容的下载. 所以把 JavaScript 放入页面顶部也会导致 白屏 现象.</p>
+<p><strong>脚本会阻塞后面内容的呈现<br>脚本会阻塞其后组件的下载</strong></p>
+<blockquote>
+<p>浏览器读取js文件时，是立即读取，期间不同时操作读取css和HTML。故如果js文件放在头部，浏览器在读取js文件间的间隙时，是没有读取到HTML和css文件的，此时浏览器出现白屏现象。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">如果把样式放在底部,对于IE浏览器,在某些场景下(新窗口打开,刷新等)页面会出现白屏,而不是内容逐步展现</span><br><span class="line">如果使用 @import 标签,即使 CSS 放入 link, 并且放在头部,也可能出现白屏</span><br></pre></td></tr></table></figure>
+<p><strong>解决方案：</strong> <em>使用 link 标签将样式表放在顶部，并将JS放在body底部</em></p>
+<h1 id="FOUC-Flash-of-Unstyled-Content-无样式内容闪烁"><a href="#FOUC-Flash-of-Unstyled-Content-无样式内容闪烁" class="headerlink" title="FOUC (Flash of Unstyled Content) 无样式内容闪烁"></a>FOUC (Flash of Unstyled Content) 无样式内容闪烁</h1><p>如果把样式放在底部,对于IE浏览器,在某些场景下(点击链接,输入URL,使用书签进入等),会出现 FOUC 现象(逐步加载无样式的内容,等CSS加载后页面突然展现样式).对于 Firefox 会一直表现出 FOUC .</p>
+<p>由于Firefox浏览器的读取机制与Chrome的读取机制（读取完HTML文件，再读取完css文件才显示）不同。</p>
+<p>Firefox是css一边加载一边显示，故会出现页面上部分渲染完成，下部分却没有样式的情况。故在没有样式到样式加载完成期间浏览器会会自动刷新加上新加载的样式，这期间会出现无样式内容闪烁。</p>
+<h1 id="加载异步"><a href="#加载异步" class="headerlink" title="加载异步"></a>加载异步</h1><p><code>&lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;</code><br>没有 defer 或 async，浏览器会立即加载并执行指定的脚本，“立即”指的是在渲染该 script 标签之下的文档元素之前，也就是说不等待后续载入的文档元素，读到就加载并执行。</p>
+<p><code>&lt;script async src=&quot;script.js&quot;&gt;&lt;/script&gt;</code><br>有 async，加载和渲染后续文档元素的过程将和 script.js 的加载与执行并行进行（异步）。</p>
+<p><code>&lt;script defer src=&quot;script.js&quot;&gt;&lt;/script&gt;</code><br>有 defer，加载后续文档元素的过程将和 script.js 的加载并行进行（异步），但 script.js 的执行要在所有元素解析完成之后，DOMContentLoaded 事件触发之前完成。</p>
+<ul>
+<li><strong>defer:</strong> 脚本延迟到文档解析和显示后执行，有顺序</li>
+<li><strong>async:</strong> 不保证顺序</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/8353883-1b0479f3a534e03f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>蓝色线代表网络读取，红色线代表执行时间，这俩都是针对脚本的；绿色线代表 HTML 解析。</p>
+<p><strong>此图告诉我们以下几个要点：</strong></p>
 <ol>
-<li>电脑安装hexo<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g          //全局安装hexo客户端</span><br><span class="line">$ hexo init blog                   //创建一个blog的文件夹，并且hexo初始化改文件夹</span><br><span class="line">$ cd blog                          //进入blog文件夹</span><br><span class="line">$ npm install                      //安装hexo需要的包</span><br><span class="line">$ hexo server                   //打开hexo服务器，默认端口为4000；</span><br></pre></td></tr></table></figure>
-</li>
+<li>defer 和 async 在网络读取（下载）这块儿是一样的，都是异步的（相较于 HTML 解析）</li>
+<li>它俩的差别在于脚本下载完之后何时执行，显然 defer 是最接近我们对于应用脚本加载和执行的要求的</li>
+<li>关于 defer，此图未尽之处在于它是按照加载顺序执行脚本的，这一点要善加利用<br>async 则是一个乱序执行的主，反正对它来说脚本的加载和执行是紧紧挨着的，所以不管你声明的顺序如何，只要它加载完了就会立刻执行</li>
+<li>仔细想想，async 对于应用脚本的用处不大，因为它完全不考虑依赖（哪怕是最低级的顺序执行），不过它对于那些可以不依赖任何脚本或不被任何脚本依赖的脚本来说却是非常合适的，最典型的例子：Google Analytics</li>
 </ol>
-<p>此时本地的hexo已经部署完毕，在浏览器搜索 ： <a href="http://localhost:4000，已经可以查看博客" target="_blank" rel="noopener">http://localhost:4000，已经可以查看博客</a></p>
+<h1 id="基本调试"><a href="#基本调试" class="headerlink" title="基本调试"></a>基本调试</h1><ul>
+<li>alert</li>
+<li>console.log</li>
+<li>打断点</li>
+<li>二分法</li>
+</ul>
+<p><strong>参考</strong><br>高性能网站建设指南, Steve Sounders<br><a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction?hl=en" target="_blank" rel="noopener">Render-tree construction, layout, and paint</a></p>
+<p><a href="http://taligarsiel.com/Projects/howbrowserswork1.htm" target="_blank" rel="noopener">How browsers work</a></p>
+<h1 id="CSS和JS在网页中的放置顺序是怎样的？"><a href="#CSS和JS在网页中的放置顺序是怎样的？" class="headerlink" title="CSS和JS在网页中的放置顺序是怎样的？"></a>CSS和JS在网页中的放置顺序是怎样的？</h1><p>使用 link 标签将css文件链接放在head内，并将JS文件链接放在body底部。</p>
+<h1 id="解释白屏和FOUC"><a href="#解释白屏和FOUC" class="headerlink" title="解释白屏和FOUC"></a>解释白屏和FOUC</h1><ul>
+<li>浏览器读取js文件时，是立即读取，期间不同时操作读取css和HTML。对于图片和CSS, 在加载时会并发加载(如一个域名下同时加载两个文件). 但在加载 JavaScript 时,会禁用并发。故如果js文件放在头部，浏览器在读取js文件间的间隙时，是没有读取到HTML和css文件的，,并且阻止其他内容的下载。所以此时浏览器出现白屏现象。</li>
+</ul>
+<ul>
+<li><strong>FOUC:</strong> 由于Firefox浏览器的读取机制与Chrome的读取机制（读取完HTML文件，再读取完css文件才显示）不同。Firefox是css一边加载一边显示，故会出现页面上部分渲染完成，下部分却没有样式的情况。故在没有样式到样式加载完成期间浏览器会会自动刷新加上新加载的样式，这期间会出现无样式内容闪烁。</li>
+</ul>
+<h1 id="async和defer的作用是什么？有什么区别"><a href="#async和defer的作用是什么？有什么区别" class="headerlink" title="async和defer的作用是什么？有什么区别"></a>async和defer的作用是什么？有什么区别</h1><p>作用：加载和渲染后续文档元素的过程将和 script.js 的加载与执行并行进行（异步）。</p>
+<p>区别：</p>
+<ul>
+<li><strong>defer:</strong> 脚本延迟到文档解析和显示后执行，有顺序</li>
+<li><strong>async:</strong> 不保证顺序</li>
+</ul>
 <ol>
-<li><p>部署hexo到github上面</p>
-<ul>
-<li><p>安装hexo-deployer-git</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改blog文件夹下面的yml文件</p>
-</li>
-</ul>
-</li>
+<li>defer 和 async 在网络读取（下载）这块儿是一样的，都是异步的（相较于 HTML 解析）</li>
+<li>它俩的差别在于脚本下载完之后何时执行，显然 defer 是最接近我们对于应用脚本加载和执行的要求的<h1 id="简述网页的渲染机制"><a href="#简述网页的渲染机制" class="headerlink" title="简述网页的渲染机制"></a>简述网页的渲染机制</h1><strong>浏览器渲染机制（Chrome）</strong></li>
+<li>解析 HTML 标签, 构建 DOM 树</li>
+<li>解析 CSS 标签, 构建 CSSOM 树</li>
+<li>把 DOM 和 CSSOM 组合成 渲染树 (render tree)</li>
+<li>在渲染树的基础上进行布局, 计算每个节点的几何结构</li>
+<li>把每个节点绘制到屏幕上 (painting)</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:silvia-YQY/silvia-YQY.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line">  message: blog</span><br></pre></td></tr></table></figure>
-<ul>
-<li>重新生成并部署</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p><strong>注：无须将blog文件夹里面安装silvia-YQY.github.io仓库的文件夹内，而且无须git push 上传。只需要安装hexo-deployer-git，并运行hexo deploy ，该插件会自动将文件部署到silvia-YQY.github.io仓库内。</strong></p>
-<p><strong>切记！！！不要把hexo的blog文件夹复制过去silvia-YQY.github.io仓库，silvia-YQY.github.io仓库无须操作任何事情！！！血的教训</strong></p>
-<p>此时本地的hexo已经在github部署完毕，在浏览器搜索 ： <a href="https://silvia-yqy.github.io，已经可以查看博客" target="_blank" rel="noopener">https://silvia-yqy.github.io，已经可以查看博客</a></p>
-<h1 id="此为不知道为何会出问题的解决办法"><a href="#此为不知道为何会出问题的解决办法" class="headerlink" title="此为不知道为何会出问题的解决办法"></a>此为不知道为何会出问题的解决办法</h1><p>由于之前在家里弄，全部已经部署完毕了，并且可以正常运行。但是更新文章的时候，可能是手贱，上传文件上传错了，而且自己也傻逼的把文件复制过去仓库了，所以，哎~</p>
-<ol>
-<li>hexo deploy 错误<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">nothing to commit, working directory clean</span><br><span class="line">Permission denied (publickey).</span><br><span class="line">fatal: Could not read from remote repository.</span><br><span class="line">Please make sure you have the correct access rights</span><br><span class="line">and the repository exists.</span><br><span class="line">FATAL Something&apos;s wrong. Maybe you can find the solution here: [http://hexo.io/docs/troubleshooting.html](http://hexo.io/docs/troubleshooting.html)</span><br><span class="line"></span><br><span class="line">Error: Permission denied (publickey).                    //  此为重点！！！！</span><br><span class="line"></span><br><span class="line">fatal: Could not read from remote repository.</span><br><span class="line">Please make sure you have the correct access rights</span><br><span class="line">and the repository exists.</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>该错误，跟着<a href="https://help.github.com/articles/error-permission-denied-publickey/" target="_blank" rel="noopener">官方文档</a>做就好。</p>
-<p><strong>在hexo文件夹内进行一下操作,期间若需要输入密码，就输入密码吧</strong></p>
-<ul>
-<li>1.1 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -T git@github.com</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>没出错后</p>
-<ul>
-<li>1.2<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eval &quot;$(ssh-agent -s)&quot;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>正确应该为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br><span class="line">Enter passphrase for key &apos;/c/Users/Administrator/.ssh/id_rsa&apos;:</span><br><span class="line">Hi silvia-YQY! You&apos;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>1.3<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ eval &quot;$(ssh-agent -s)&quot;</span><br><span class="line">Agent pid 2556</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li>1.4 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-add -l -E md5</span><br><span class="line">4096 MD5:7a:fa:c3:4e:cf:1a:91:b7:d0:5d:45:79:90:b4:d8:03 /c/Users/Administrator/.ssh/id_rsa (RSA)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>下面的md5码出现为正常，若出现一下情况<br>  <figure class="highlight plain"><figcaption><span>agent has no identities.```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">则先去C:\Users\Administrator\.ssh删除known_hosts文件，然后运行</span><br><span class="line">```$ ssh-add ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure></p>
-<p>此为正确信息<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-add ~/.ssh/id_rsa</span><br><span class="line">Enter passphrase for /c/Users/Administrator/.ssh/id_rsa:</span><br><span class="line">Identity added: /c/Users/Administrator/.ssh/id_rsa (/c/Users/Administrator/.ssh/id_rsa)</span><br></pre></td></tr></table></figure></p>
-<p>正确后，再次运行<br><figure class="highlight plain"><figcaption><span>ssh-add -l -E md5```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">出现md5码为一斤绑定权限成功。</span><br><span class="line">此时可以顺利的  ```$ hexo deploy</span><br></pre></td></tr></table></figure></p>
 
       
       
@@ -376,13 +398,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/02/12/2/">hexo + github 配置及错误解决</a></p>
+        <p><span>本文标题:</span><a href="/2018/08/14/初步了解JavaScript/">初步了解JavaScript</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 YQY 的个人博客">YQY</a></p>
-        <p><span>发布时间:</span>2018年02月12日 - 13时47分</p>
-        <p><span>最后更新:</span>2018年08月13日 - 22时44分</p>
+        <p><span>发布时间:</span>2018年08月14日 - 22时53分</p>
+        <p><span>最后更新:</span>2018年08月14日 - 22时54分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/02/12/2/" title="hexo + github 配置及错误解决">http://yoursite.com/2018/02/12/2/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/02/12/2/　　作者: YQY" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/08/14/初步了解JavaScript/" title="初步了解JavaScript">http://yoursite.com/2018/08/14/初步了解JavaScript/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/08/14/初步了解JavaScript/　　作者: YQY" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -395,18 +417,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2018/02/12/3/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Form 表单
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/02/12/1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">从 URL 输入到页面展现发生了什么</div>
+    <a href="/2018/08/14/CSS过渡和动画/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS过渡和动画</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -417,7 +430,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#此为不知道为何会出问题的解决办法"><span class="toc-number">1.</span> <span class="toc-text">此为不知道为何会出问题的解决办法</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#javascript"><span class="toc-number">1.</span> <span class="toc-text">javascript</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#变量提升"><span class="toc-number">2.</span> <span class="toc-text">变量提升</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#页面中引入js的几种方法"><span class="toc-number">3.</span> <span class="toc-text">页面中引入js的几种方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#浏览器渲染机制（Chrome）"><span class="toc-number">4.</span> <span class="toc-text">浏览器渲染机制（Chrome）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#白屏问题"><span class="toc-number">5.</span> <span class="toc-text">白屏问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#FOUC-Flash-of-Unstyled-Content-无样式内容闪烁"><span class="toc-number">6.</span> <span class="toc-text">FOUC (Flash of Unstyled Content) 无样式内容闪烁</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#加载异步"><span class="toc-number">7.</span> <span class="toc-text">加载异步</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#基本调试"><span class="toc-number">8.</span> <span class="toc-text">基本调试</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS和JS在网页中的放置顺序是怎样的？"><span class="toc-number">9.</span> <span class="toc-text">CSS和JS在网页中的放置顺序是怎样的？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解释白屏和FOUC"><span class="toc-number">10.</span> <span class="toc-text">解释白屏和FOUC</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#async和defer的作用是什么？有什么区别"><span class="toc-number">11.</span> <span class="toc-text">async和defer的作用是什么？有什么区别</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#简述网页的渲染机制"><span class="toc-number">12.</span> <span class="toc-text">简述网页的渲染机制</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -483,13 +496,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/02/12/3/" title="上一篇: Form 表单">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2018/02/12/1/" title="下一篇: 从 URL 输入到页面展现发生了什么">
+            <a href="/2018/08/14/CSS过渡和动画/" title="下一篇: CSS过渡和动画">
                 <i class="fa fa-angle-right"></i>
             </a>
         
